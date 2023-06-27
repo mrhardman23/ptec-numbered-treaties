@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | PTEC Numbered Treaties</title>
+  <link rel="stylesheet" href="sass/main.css" />
+  <!-- Content sourced from W3Schools (https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) -->
+  <!-- Loading an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- End of sourced content -->
+  <link rel="icon" type="image/x-icon" href="/images/ptec-logo.svg">
+</head>
+<body id="preload" onload="manageMobileNav()" onresize="manageMobileNav()">
+  <nav>
+    <a href="index.html" id="nav__logo-link"><img id="nav__logo" src="images/home/ptec-circle.png" alt="The circular logo for Pembina Trails Early College"/></a>
+    <ul id="overlay">
+      <li id="close-btn" aria-hidden="true">
+        <a href="javascript:void(0)" onclick="closeNav()" aria-hidden="true">&#215;</a>
+      </li>
+      <li><a href="index.html" class="nav-links">Home</a></li>
+      <li><a href="treaty-1/index.html" target="_blank" class="nav-links">Treaty 1</a></li>
+      <li><a href="treaty-2/index.html" target="_blank" class="nav-links">Treaty 2</a></li>
+      <li><a href="treaty-3/index.html" target="_blank" class="nav-links">Treaty 3</a></li>
+      <li><a href="treaty-4/index.html" target="_blank" class="nav-links">Treaty 4</a></li>
+      <li><a href="treaty-5/index.html" target="_blank" class="nav-links">Treaty 5</a></li>
+      <li><a href="treaty-6/index.html" target="_blank" class="nav-links">Treaty 6</a></li>
+      <li><a href="#" target="_blank" class="nav-links">
+        Treaty 5 Adhesion & Treaty 10 (Currently Unavailable)
+      </a></li>
+    </ul>
+    <a href="javascript:void(0)" id="open-btn" onclick="openNav()" aria-hidden="true">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </a>
+  </nav>
+  <header id="title-card">
+    <h1>PTEC's Numbered Treaty Websites</h1>
+  </header>
+  <main>
+    <p class="intro-text">
+      This is the landing page for the websites that were designed by PTEC students beginning in 
+      2022. One website has been chosen for each of the Numbered Treaties that make up Manitoba, which
+      include Treaty 1, Treaty 2, Treaty 3, Treaty 4, Treaty 5, and Treaty 5 Adhesion, as well as 
+      Treaties 6 and 10 due to the communities in Manitoba that are signatories to these Treaties.
+    </p>
+    <p class="intro-text">
+      Please click on the options below to learn more about each of the Numbered Treaties that are 
+      part of Manitoba and remember "We Are All Treaty People."
+    </p>
+    <p class="intro-text">
+      <b>NOTE: These websites are best viewed on a computer as these students did not learn
+      how to make websites responsive for mobile devices.</b>
+    </p>
+    <section id="flex-grid__home">
+      <!-- Fix link -->
+      <a href="#" target="_blank">
+        <div id="grid-item__left">
+          <div>
+            <img src="images/home/Treaty-1.png" alt="A map view of Treaty 1."/>
+          </div>
+          <h2>Treaty 1</h2>
+        </div>
+      </a>
+      <!-- Fix link -->
+      <a href="#" target="_blank">
+        <div id="grid-item__right">
+          <div>
+            <img src="images/home/Treaty-2.png" alt="A map view of Treaty 2 lands."/>
+          </div>
+          <h2>Treaty 2</h2>
+        </div>
+      </a>
+      <!-- Fix link -->
+      <a href="#" target="_blank">
+        <div id="grid-item__left">
+          <div>
+            <img src="images/home/Treaty-3.png" alt="A map view of Treaty 3 lands."/>
+          </div>
+          <h2>Treaty 3</h2>
+        </div>
+      </a>
+      <!-- Fix link -->
+      <a href="#" target="_blank">
+        <div id="grid-item__right">
+          <div>
+            <img src="images/home/Treaty-4.png" alt="A map view of Treaty 4 lands."/>
+          </div>
+          <h2>Treaty 4</h2>
+        </div>
+      </a>
+      <!-- Fix link -->
+      <a href="#" target="_blank">
+        <div id="grid-item__left">
+          <div>
+            <img src="images/home/Treaty-5.png" alt="A map view of Treaty 5 lands."/>
+          </div>
+          <h2>Treaty 5</h2>
+        </div>
+      </a>
+      <!-- Fix link -->
+      <a href="#" target="_blank">
+        <div id="grid-item__right">
+          <div>
+            <img src="images/home/Treaty-6.png" alt="A map view of Treaty 6 lands."/>
+          </div>
+          <h2>Treaty 6</h2>
+        </div>
+      </a>
+      <!-- Fix link -->
+      <a href="#" target="_blank">
+        <div id="grid-item__left">
+          <div>
+            <img src="images/home/Treaty-5-Adhesion-Treaty-10.png" alt="A map view of Treaty 5 Adhesion lands."/>
+          </div>
+          <h2>
+            Treaty 5 Adhesion and Treaty 10 Treaty 5 Adhesion & Treaty 10 <br/>
+            (Currently Unavailable)
+          </h2>
+        </div>
+      </a>
+    </section>
+  </main>
+  <footer>
+    <p>&#169; Scott Hardman & the Grade 10 PTEC Software Development Classes</p>
+  </footer>
+  <script>
+    window.onload = function (){
+      document.getElementsByTagName("body")[0].removeAttribute("id");
+    };
+  </script>
+  <script src="js/mobileNav.js"></script>
+</body>
+</html>

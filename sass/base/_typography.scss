@@ -1,0 +1,65 @@
+* {
+  line-height: 150%;
+
+  font-family: Arial, Calibri, Helvetica, sans-serif;
+
+  text-align: center;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: $default-font;
+}
+
+nav {
+  #overlay {
+    li {
+      a {
+        font-size: $large-font;
+
+        text-decoration: none;
+      }
+    }
+  }
+  #open-btn {
+    font-size: $large-font;
+
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3 {
+  line-height: 130%;
+}
+
+h1 {
+  font-size: $largest-font;
+  letter-spacing: 0.2rem;
+}
+
+h2 {
+  font-size: $large-font;
+}
+
+footer p {
+  font-weight: bold;
+}
+
+@media all and (min-width: 850px) {
+  nav {
+    #overlay {
+      li {
+        a {
+          font-size: $default-font;
+        }
+      }
+    }
+  }
+
+  h2 {
+    font-size: $larger-font;
+  }
+}

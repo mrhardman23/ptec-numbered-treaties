@@ -1,0 +1,266 @@
+/*
+  Colour Pallete:
+    -#A50000 (Deep Red)
+    -#9c2b09 (Dark Oragne)
+    -#EDE4E8 (White)
+    -#1B1A25 (Black)
+
+  I chose the colour red because it is the colour of the Canadian
+  flag, and the treaties are a big part of Canadian history. Red
+  also repersents sacrifice, which is also a huge part of the
+  treaties.
+  
+  I chose the colour oragnge as an accent because it repersents
+  optimism which in this contenxt is promoting moving forward in a
+  spirit of reconciliation and healing. I also chose to include the
+  colour orange because it repersents the mistakes made in the past
+  (Orange Shirt Day)
+
+  The headings are serif fonts to make them visually differant from
+  the body paragraphs, and more attention grabbing.
+
+  The paragraphs are sans-serif fonts to make them easier to read and
+  more inviting to read for everyone since this information needs to
+  be accesable for everyone.
+
+  The combination of both styles of fonts makes the website look both
+  trustworth and established, as well as inviting.
+*/
+
+/*
+  Global styling for line height
+
+  Makes it so the text is double spaced. 140% spacing
+  looked really bad, and didn't fit my website so I 
+  chose not to use it.
+
+  Double spacing gives more of an essay like feel to
+  the website, which I feel suites the content the best.
+*/
+* {
+  line-height: 2;
+}
+
+/*
+  Sets the font size for everything
+*/
+html {
+  font-size: 62.5%;
+}
+
+/*
+  Styling for each element in the body tags of
+  the webstite.
+
+  Sets a default background colour of #f3f7f4 (an off 
+  white), the text colour to #1b1a25 (a very dark grey).
+
+  Styles the font to be a Roboto font with a font size of
+  1.6rem.
+
+  Margin adds a margin of 0px to the top and bottom and a
+  margin of 20% to the left and right of each element,
+  centering the content.
+*/
+body {
+  background-color: #f3f7f4;
+  color: #1b1a25;
+
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 1.6rem;
+
+  margin: 0px 20%;
+}
+
+/*
+  Styling for the nav bar from the tutorial
+  by W3 Schools.
+
+  Styles the ul repersenting the nav bar to have a background
+  colour of #a50000 (Red) and no a hidden overflow
+  
+  Removes the bullet points of each list element and adds
+  padding to each side so the links have some space from the
+  background.
+
+  Source: https://www.w3schools.com/css/css_navbar_horizontal.asp
+*/
+#top-nav {
+  background-color: #a50000;
+  overflow: hidden;
+
+  list-style-type: none;
+  padding: 5px;
+}
+
+/*
+  Styles all the list items (links) in the nav bar to display
+  in line with each other. 
+*/
+#top-nav li {
+  display: inline;
+}
+
+/*
+  Styles the links in the nav bar to be white by default and
+  aligned with the center of their container.
+  
+  Gets rid of the default underlining of links. Setting these 
+  elements to display as inline block to give space between it 
+  and the background.
+*/
+#top-nav a {
+  color: #f3f7f4;
+  text-align: center;
+  text-decoration: none;
+
+  display: inline-block;
+  padding: 1.5% 1.5%;
+}
+
+/*
+  Styles it so when the mouse is hovered or the element is
+  tabbed on the links background and font colour swap.
+*/
+#top-nav a:hover,
+#top-nav a:focus {
+  background-color: #f3f7f4;
+  color: #a50000;
+}
+
+/*
+  Styles it so when the link is clicked the font is bolded
+  to show that the webpage is now switching. Visual feedback.
+*/
+#top-nav a:active {
+  font-weight: bolder;
+}
+
+/*
+  Header class, consistently styles the headers across the 
+  website regardless of their level.
+
+  Adds a 50px margin to the top, a 75px margin to the left
+  and right and 0px on the bottom. Offsets the element from
+  the edge of the page, like an indent in an essay.
+
+  Color sets the font colour to be a contrast requirment 
+  meeting red, giving a consistent heading colour.
+*/
+.header {
+  margin: 50px 0px 0px;
+
+  font-family: "Times New Roman", Times, serif;
+  color: #a50000;
+}
+
+/*
+  Adds the margin to the left to give it a paragraph like
+  indent.
+*/
+section {
+  margin-left: 50px;
+}
+
+/*
+  Styling for all h1 elements to have a font-size of 6.4rem.
+
+  Four times as big as the paragraph text.
+*/
+h1 {
+  font-size: 6.4rem;
+}
+
+/*
+  Styling for all h2 elements to have a font-size of 3.2rem.
+
+  Half the size of the h1 tags.
+*/
+h2 {
+  font-size: 3.2rem;
+}
+
+/*
+  Adds space to the top of the figure
+*/
+figure {
+  margin: 5% 0%;
+}
+
+/*
+  Styles the fig captions to have a dark orange colour and to
+  be aligned with the center with no indent.
+
+  Adds a margin to the bottom to seperate it from the content
+  underneath it.
+*/
+figcaption {
+  color: #9c2b09;
+
+  text-align: center;
+  text-indent: 0;
+
+  margin-bottom: 5%;
+}
+
+/*
+  Highlights the really important information throughout the website
+
+  Styles it so it underlines and bolds the text.
+*/
+span {
+  text-decoration: underline;
+  font-style: bold;
+}
+
+/*
+  -webkit-filter: drop-shadow:
+    Adds in a drop shadow directly underneath the 
+    image (x and y offset of 0px) and a radius of 10px
+
+  Tranitions to the diffrent hover properties in 0.1s
+    - Changes in scale aswell as outline
+*/
+img {
+  /* 
+    Remember Mr. Hardman, the change is the outline. You gave permission that 
+    this transition is one that we did not cover in class.
+  */
+  /* autoprefixer: off */
+  -webkit-transition: outline-width 0.1s, -webkit-transform 0.1s;
+  transition: outline-width 0.1s, -webkit-transform 0.1s;
+  -o-transition: outline-width 0.1s, -o-transform 0.1s;
+  -moz-transition: transform 0.1s, outline-width 0.1s, -moz-transform 0.1s;
+  transition: transform 0.1s, outline-width 0.1s;
+  transition: transform 0.1s, outline-width 0.1s, -webkit-transform 0.1s,
+    -moz-transform 0.1s, -o-transform 0.1s;
+
+  -webkit-filter: drop-shadow(0 0 10px #49414d);
+
+  outline: #a50000 solid 0px;
+}
+
+/*
+  Scales the image up when it is hovered and adds an outline
+  to draw the users attention, seperating it from the background.
+*/
+img:hover,
+img:focus {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+
+  outline: #a50000 solid 5px;
+}
+
+/*
+  Styles all elements in the footer to be aligned with the center
+  and to be a smaller font size
+
+  Used for things like copyright and contact information.
+*/
+footer {
+  text-align: center;
+}

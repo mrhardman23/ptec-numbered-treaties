@@ -1,0 +1,408 @@
+body {
+  background-color: #eeeeee;
+}
+
+nav {
+  background-color: #e4e4e4;
+  box-shadow: 0 2px 5px #121212;
+}
+nav #overlay {
+  background-color: #1D1728;
+  background-color: rgba(29, 23, 40, 0.95);
+}
+nav #overlay #close-btn a:hover::before, nav #overlay #close-btn a:hover::after {
+  border: 0 solid transparent;
+}
+nav #overlay li a {
+  background: none;
+  color: #e4e4e4;
+  border: 0;
+}
+nav #overlay li a::before, nav #overlay li a::after {
+  border: 2px solid transparent;
+}
+nav #overlay li a:hover::before {
+  border-top-color: #e4e4e4;
+  border-right-color: #e4e4e4;
+}
+nav #overlay li a:hover::after {
+  border-bottom-color: #e4e4e4;
+  border-left-color: #e4e4e4;
+}
+nav #open-btn {
+  color: #1D1728;
+}
+
+#title-card {
+  background-color: #252525;
+  color: #eeeeee;
+}
+
+#grid-item__left div, #grid-item__left h2, #grid-item__right div, #grid-item__right h2 {
+  background-color: #e4e4e4;
+  color: #1D1728;
+}
+
+footer {
+  background-color: #e4e4e4;
+  color: #1D1728;
+}
+
+@media screen and (min-width: 850px) {
+  nav #overlay {
+    background-color: transparent;
+  }
+  nav #overlay li {
+    border-right: 2px solid #1D1728;
+  }
+  nav #overlay li:nth-of-type(9) {
+    border-right: 0;
+  }
+  nav #overlay li a {
+    color: #1D1728;
+  }
+  nav #overlay li a::before, nav #overlay li a::after {
+    border: 0;
+  }
+  nav #overlay li a:hover::before, nav #overlay li a:hover::after {
+    border: 0 solid transparent;
+  }
+  nav #overlay li a:hover {
+    color: #e4e4e4;
+    background-color: #1D1728;
+  }
+}
+* {
+  line-height: 150%;
+  font-family: Arial, Calibri, Helvetica, sans-serif;
+  text-align: center;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+}
+
+nav #overlay li a {
+  font-size: 3.2rem;
+  text-decoration: none;
+}
+nav #open-btn {
+  font-size: 3.2rem;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  line-height: 130%;
+}
+
+h1 {
+  font-size: 4.8rem;
+  letter-spacing: 0.2rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+footer p {
+  font-weight: bold;
+}
+
+@media all and (min-width: 850px) {
+  nav #overlay li a {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#preload * {
+  transition: none !important;
+}
+
+body {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin-bottom: 15px;
+}
+nav #nav__logo-link {
+  display: flex;
+  align-items: center;
+  width: 75px;
+  margin: 10px;
+  float: left;
+}
+nav #nav__logo-link img {
+  width: 100%;
+}
+nav #overlay {
+  display: flex;
+  flex-direction: column;
+  /* Code sourced from W3 Schools (https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp) */
+  position: fixed; /* Stay in place */
+  top: 0;
+  right: 0;
+  z-index: 1; /* Sit on top */
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  width: 0;
+  height: 100%;
+  overflow: hidden; /* Disable scroll */
+  /* End of sourced code */
+  list-style: none;
+}
+nav #overlay #close-btn {
+  flex: 0 0.5;
+}
+nav #overlay #close-btn a {
+  width: 10%;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+nav #overlay #close-btn a:hover::before, nav #overlay #close-btn a:hover::after {
+  transition: none;
+}
+nav #overlay li {
+  display: flex;
+  justify-content: center;
+  /* Border draw code sourced from Giana (https://codepen.io/giana/pen/yYBpVY) */
+}
+nav #overlay li:first-child {
+  justify-content: end;
+}
+nav #overlay li a {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin-bottom: 2%;
+  position: relative;
+  vertical-align: middle;
+}
+nav #overlay li a::before, nav #overlay li a::after {
+  box-sizing: inherit;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+nav #overlay li a::before {
+  top: 0;
+  left: 0;
+}
+nav #overlay li a::after {
+  bottom: 0;
+  right: 0;
+}
+nav #overlay li a:hover::before, nav #overlay li a:hover::after {
+  width: 100%;
+  height: 100%;
+}
+nav #overlay li a:hover::before {
+  transition: width 0.125s ease-out, height 0.125s ease-out 0.125s;
+}
+nav #overlay li a:hover::after {
+  transition: border-color 0s ease-out 0.25s, width 0.125s ease-out 0.25s, height 0.125s ease-out 0.375s;
+}
+nav #open-btn {
+  width: 15%;
+}
+
+@media screen and (min-width: 850px) {
+  nav #overlay {
+    /* Code sourced from W3 Schools (https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp) */
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    width: 90%;
+    position: static;
+    z-index: 0;
+    overflow-x: visible;
+    transition: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  nav #overlay li {
+    width: 100%;
+    display: flex;
+    justify-content: stretch;
+  }
+  nav #overlay li:first-of-type {
+    display: none;
+  }
+  nav #overlay li a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  nav #overlay li a::before, nav #overlay li a::after {
+    display: none;
+    box-sizing: border-box;
+    content: normal;
+    position: static;
+    width: auto;
+    height: auto;
+  }
+  nav #overlay li a::before {
+    top: auto;
+    left: auto;
+  }
+  nav #overlay li a::after {
+    bottom: auto;
+    right: auto;
+  }
+  nav #overlay li a:hover::before, nav #overlay li a:hover::after {
+    width: auto;
+    height: auto;
+  }
+  nav #open-btn {
+    display: none;
+  }
+}
+#title-card {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 30px;
+  padding: 4.8rem;
+}
+#title-card #corner-image__left, #title-card #corner-image__right {
+  position: absolute;
+  width: 40%;
+}
+#title-card #corner-image__left {
+  top: -40px;
+  left: -40px;
+}
+#title-card h1 {
+  margin: 0 20%;
+}
+#title-card #corner-image__right {
+  top: -40px;
+  right: -40px;
+  transform: rotate(90deg);
+}
+
+@media all and (min-width: 600px) {
+  #title-card #corner-image__left, #title-card #corner-image__right {
+    width: 30%;
+  }
+  #title-card #corner-image__right {
+    top: auto;
+    bottom: -40px;
+    transform: rotate(180deg);
+  }
+}
+@media all and (min-width: 1000px) {
+  #title-card #corner-image__left, #title-card #corner-image__right {
+    width: 28%;
+  }
+  #title-card #corner-image__right {
+    top: auto;
+    bottom: -40px;
+    transform: rotate(180deg);
+  }
+}
+@media all and (min-width: 1200px) {
+  #title-card #corner-image__left, #title-card #corner-image__right {
+    width: 25%;
+  }
+  #title-card #corner-image__right {
+    top: auto;
+    bottom: -40px;
+    transform: rotate(180deg);
+  }
+}
+@media all and (min-width: 1500px) {
+  #title-card #corner-image__left, #title-card #corner-image__right {
+    width: 22%;
+  }
+  #title-card #corner-image__right {
+    top: auto;
+    bottom: -40px;
+    transform: rotate(180deg);
+  }
+}
+footer {
+  margin-top: 30px;
+  padding: 2.5%;
+}
+
+.intro-text {
+  margin: 2vh 5vw;
+}
+
+#flex-grid__home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#flex-grid__home a {
+  margin: 1% 0;
+  text-decoration: none;
+}
+#flex-grid__home a #grid-item__left, #flex-grid__home a #grid-item__right {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+#flex-grid__home a #grid-item__left div, #flex-grid__home a #grid-item__right div {
+  display: flex;
+  margin-bottom: 4%;
+}
+#flex-grid__home a #grid-item__left div img, #flex-grid__home a #grid-item__right div img {
+  width: 100%;
+  align-self: center;
+  margin: 0.5%;
+}
+#flex-grid__home a #grid-item__left h2, #flex-grid__home a #grid-item__right h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1%;
+  padding: 2%;
+}
+
+@media all and (min-width: 1000px) {
+  #flex-grid__home a #grid-item__left, #flex-grid__home a #grid-item__right {
+    flex-direction: row;
+  }
+  #flex-grid__home a #grid-item__left div, #flex-grid__home a #grid-item__right div {
+    width: 35%;
+    margin: 0;
+    margin-right: 0.8%;
+  }
+  #flex-grid__home a #grid-item__left h2, #flex-grid__home a #grid-item__right h2 {
+    width: 35%;
+    aspect-ratio: 1/1;
+    margin: 0;
+  }
+  #flex-grid__home a #grid-item__right {
+    flex-direction: row-reverse;
+  }
+  #flex-grid__home a #grid-item__right div {
+    margin-right: 0;
+    margin-left: 0.8%;
+  }
+}

@@ -1,0 +1,232 @@
+<!--
+  Name: Harrison Gutscher
+  Course: Web Development
+  Teacher: Scott Hardman
+  School: PTec
+  Date Last Modified: 1/18/2023
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Development</title>
+    <!-- main style sheet implementation -->
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <!-- style is internal styling -->
+    <style>
+      /* 
+        #______ is id styling
+        #ggfn-seal styles the id ggfn-seal
+
+        display changes the display of the content box
+        display changed to flex
+
+        border-radius changes the corners roundness
+        corners set for 10 pixels of curve
+
+        margin is the space from the border to the edge
+        margin set to auto to center it
+
+        margin-top changes the margin on top
+        top margin set to 20px
+
+        width changes the set width
+        width set to 380px
+
+        height changes the set height
+        height set to 320px
+
+        border changes the border
+        boder is set to 3px and solid #302939
+
+        align-self changes the alignmet 
+        alignmet set to center
+      */
+      #ggfn-seal {
+        display: flex;
+        border-radius: 10px;
+        margin: auto;
+        margin-top: 20px;
+        width: 380px;
+        height: 320px;
+        border: 3px solid #302939;
+        align-self: center;
+      }
+
+      /* 
+        #ggfn-seal styles the id ggfn-seal
+
+        corners set for 10 pixels of curve
+
+        margin set to auto to center it
+
+        top margin set to 20px
+
+        width set to 994px
+
+        height set to 6800px
+
+        boder is set to 3px and solid #302939
+      */
+      #ggfn-map {
+        border-radius: 10px;
+        margin: auto;
+        margin-top: 20px;
+        width: 994px;
+        height: 680px;
+        border: 3px solid #302939;
+      }
+    </style>
+  </head>
+  <!-- body for content -->
+  <body>
+    <!-- header form title and navigation -->
+    <header>
+      <h1>Treaty Number 4</h1>
+
+      <div id="tab" tabindex="0">
+        <h3>Other resources</h3>
+        <div id="tab-content">
+          <br />
+          <!-- ul to formate sources -->
+          <ul>
+            <li>
+              <!-- LABRC interactive map source -->
+              <a href="https://labrc.com/map/" target="_blank">
+                LABRC interactive map
+              </a>
+            </li>
+            <li>
+              <!-- NAAWI-OODENA source -->
+              <a
+                href="https://www.clc-sic.ca/real-estate/naawi-oodena"
+                target="_blank">
+                NAAWI-OODENA
+              </a>
+            </li>
+            <li>
+              <!-- Traditional First Nation Community Names source -->
+              <a href="https://mfnerc.org/community-map/" target="_blank">
+                Traditional First Nation Community Names
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- nav for navigation bar -->
+      <nav>
+        <!-- ul>li>a> to list page links/navigation -->
+        <ul>
+          <li>
+            <!-- this page link -->
+            <a href="index.html">Home Page</a>
+          </li>
+          <li>
+            <!-- second page link -->
+            <a href="area-and-people.html">Area and People</a>
+          </li>
+          <li>
+            <!-- filler link -->
+            <a href="development.html" id="active">Development</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- main for main content-->
+    <main>
+      <!-- 
+        section to oginize/separate content 
+        first block of content
+      -->
+      <section>
+        <h2>Development</h2>
+        <p>
+          <span>Treaty 4</span> has a total of 15 and of those 15 there is only
+          one urban reserve. Their largest reserve in terms of population has
+          3844 people and the size of 19,142 hectors and is the only urban
+          reserve in <span>Treaty 4</span>. The George Gordon first nation
+          reserve has modernized to the point where it has developed its own
+          phone application. This reserve has an Indian residential school
+          committee, expansion plans for economic growth, community outreach
+          programs, and much more.
+        </p>
+        <img
+          src="/images/George Gordon First Nation seal.jfif"
+          alt="The George Gordon First Nation flag and the 
+        flag is orange with the emblem in the center 
+        featuring a peace pipe inside a yellow ring"
+          id="ggfn-seal" />
+      </section>
+      <img
+        src="/images/George Gordon First Nation map.PNG"
+        alt="Google maps image of George Gordon First Nation location"
+        id="ggfn-map" />
+    </main>
+    <!-- footer for source and copy rights and stuff -->
+    <footer>
+      <!-- sources -->
+      <h3>Sources</h3>
+      <!-- ul to formate sources -->
+      <ul>
+        <li>
+          <!-- gov of ca source -->
+          <a
+            href="https://www.rcaanc-cirnac.gc.ca/eng/1100100028689/1581293019940"
+            target="_blank">
+            Governement of Canada - Treaty Texts: Treaty No.4
+          </a>
+        </li>
+        <li>
+          <!-- the ca encyclopedia source -->
+          <a
+            href="https://www.thecanadianencyclopedia.ca/en/article/treaty-4"
+            target="_blank">
+            The Canadian Encyclopedia - Treaty 4
+          </a>
+        </li>
+        <li>
+          <!-- Open Library source -->
+          <a
+            href="https://ecampusontario.pressbooks.pub/indigstudies/chapter/numbered-treaties/"
+            target="_blank">
+            Open Library - Numbered Treaties
+          </a>
+        </li>
+        <li>
+          <!-- Treaty Relations Commission of Manitoba source -->
+          <a
+            href="https://trcm.ca/lets-talk-treaties/treaties-with-the-crown/"
+            target="_blank">
+            Treaty Relations Commission of Manitoba - Number Treaties
+          </a>
+        </li>
+        <li>
+          <!-- Southern Chiefs' Organization Inc source -->
+          <a href="https://scoinc.mb.ca/treaties/" target="_blank">
+            Southern Chiefs' Organization Inc - Treaties
+          </a>
+        </li>
+        <li>
+          <!-- Southern Chiefs' Organization Inc source -->
+          <a
+            href="https://storymaps.arcgis.com/stories/3a6048e38dae4afd8def879b63f2b1b5"
+            target="_blank">
+            Treaty Relations Commission of Manitoba - Whats your story? - Treaty
+            4
+          </a>
+        </li>
+        <li>
+          <!-- George Gordon First Nation source -->
+          <a href="https://ggfn.ca/" target="_blank">
+            George Gordon First Nation
+          </a>
+        </li>
+      </ul>
+      <p>&#169;Harrison Gutscher</p>
+    </footer>
+  </body>
+</html>

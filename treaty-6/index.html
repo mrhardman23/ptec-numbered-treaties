@@ -1,0 +1,170 @@
+<!-- 
+  Name: Luke Bushuk
+  Course: Software Development 20S
+  Teacher: Mr. Hardman
+  School: PTEC
+  Date Last Modified: Thursday, Jan  19, 2023
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheet/main.css" />
+    <title>Treaty 6</title>
+    <!-- internal stylesheet for page-specific elements -->
+    <style>
+      /* 
+        Mandatory use of span to emphasize text
+          font-weight: bold; - sets the text within spans with the class of text-emphasis to be bold
+      */
+      .text-emphasis {
+        font-weight: bold;
+      }
+
+      /* 
+        Table styling 
+          margin-left: auto; - sets equal spacing on all sides of the table, which centers it
+          border: 1px solid #414141; - sets the parameters for the outline of the table. 1px of width, solid style, and a near black colour.
+          font-family: - sets the default font to roboto-regular, with the default sans-serif font as a fallback
+          border-collapse: collapse; - collapses the borders into a single border
+          margin-bottom: - sets the margin at the bottom of the table for some more spacing
+
+      */
+      table,
+      th {
+        margin: auto;
+        padding: 6px;
+        border: 1px solid #414141;
+        border-collapse: collapse;
+        font-family: roboto-regular, sans-serif;
+        margin-bottom: 50px;
+      }
+      /* 
+        styling for the content within the table
+          padding-right: 25px; - adds extra spacing on the right side of the content
+          border: 1px solid #414141; - adds a border in between the two cells of the table. parameters are the same as previous border
+      */
+      td {
+        padding-right: 25px;
+        border: 1px solid #414141;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav id="top-nav">
+        <ul>
+          <li><a id="active" href="index.html">Home</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="application.html">Application</a></li>
+        </ul>
+      </nav>
+      <h1>Treaty 6</h1>
+      <hr />
+    </header>
+    <main>
+      <img
+        id="right-image"
+        src="/media/canada-treaty-map.png"
+        alt="A map of Canada showing the borders of the eleven numbered treaties. 
+          Treaty six is shown in the center-left of the country, in provinces Saskatchewan 
+          and Alberta"
+        height="360px" />
+      <section>
+        <h2>What is a Treaty?</h2>
+        <p>
+          A treaty is a formal agreement between two or more parties. The thing
+          about treaties is that they are binding; treaties last forever.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>What is Treaty 6?</h2>
+        <p>
+          <span class="text-emphasis">Treaty 6</span> is one of the 11 Canadian
+          numbered treaties. It was signed in 1876 by representatives of the
+          Crown and Cree, Ojibwe, and Assiniboine leaders. It extends from the
+          mid section of Alberta and Saskatchewan, and includes a couple of
+          communities in Manitoba.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>The terms of Treaty 6</h2>
+        <p>
+          <span class="text-emphasis">Treaty 6</span> extends on terms present
+          in treaties 1 through 5, with the addition of protection from famine,
+          and medicial supplies.
+        </p>
+        <table>
+          <tr>
+            <th>The Government received:</th>
+            <th>The First Nations received:</th>
+          </tr>
+          <tr>
+            <td>
+              <ul>
+                <li>The land of the First Nations</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>
+                  Reserve lands: lands protected from encroachment of settlers
+                </li>
+                <li>Schooling for First Nation children</li>
+                <li>11.5 km<sup>2</sup> of land per family of five</li>
+                <li>$12 per person</li>
+                <li>$5 additional per person, per year</li>
+                <li>$25 yearly salary for cheifs</li>
+                <li>One horse, one harness, and one wagon or two carts</li>
+                <li>Various agricultural and hunting tools</li>
+                <li>A medicine chest</li>
+                <li>Guarantee of assistance in the event of a famine</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <h2>Sources</h2>
+        <ul>
+          <li>
+            <a
+              class="source"
+              href="https://www.travelmanitoba.com/places/treaty-areas/">
+              TravelManitoba.ca
+            </a>
+          </li>
+          <li>
+            <a class="source" href="https://en.wikipedia.org/wiki/Treaty_6">
+              Wikipedia.org
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="source"
+              href="https://www.saskatoon.ca/community-culture-heritage/cultural-diversity/indigenous-initiatives/treaty-6-metis-homeland">
+              Saskatoon.ca
+            </a>
+          </li>
+          <li>
+            <a
+              class="source"
+              href="https://www.travelmanitoba.com/places/treaty-areas/">
+              TravelManitoba.com
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <hr />
+      <p><u>&#169; 2022 Luke Bushuk</u></p>
+    </footer>
+  </body>
+</html>

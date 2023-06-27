@@ -1,0 +1,706 @@
+/*
+  Name: Dylan Sanchez
+  Course: Software Development 20S
+  Teacher: Mr. Hardman
+  School: Pembina Trails Early College
+  Date Last Modified: 2023/1/19
+  Grade: 4-8 
+*/
+
+/* 
+  I have chosen a monochrome color theme. 
+  I have chosen the color based on color psychology and have chosen the color orange because
+  it is a meaningful color for the indigenous peoples. I have chosen dark mode because I have 
+  many images and I want those images to be impactful on the reader. Since there is a lot of text,
+  I have made a section in middle for white and black text for easy reading of the text.
+
+  I also have chosen to have a more basic font because this website is for Grades 4 to 8. I chose
+  to style words in paragraphs like the word Treaty One so that it is more impactful.
+
+  I have used my primary color to draw the users attention to the pictures by outlining them with orange and outlining my nav with orange and making
+  the back to top button a gradient orange.
+  I want my website to come across as youthful and accessible or timely and cutting-edge, so I chose a sans-serif font family. 
+
+  I chose dark mode because I am emphasizing visual content. 
+  and I am trying to evoke strong emotions based on the colors I chose along with the dark theme. 
+  
+*/
+
+/* The * makes it apply to all of the code or the whole website. It changes the line height to be 140%. */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  line-height: 140%;
+}
+
+/* 
+  This changes everything in the HTML tag to have the font to be 62.5% size. this changes the scoll
+  behavior to smooth
+*/
+html {
+  /*Typography stuff*/
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* 
+  This changes everything in the body tag to have a background color of RGB (20, 18, 18). 
+  It also changes the font to be "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif
+  and changes the size of the font to be 1.6 REM.
+  Place content center centers the content
+  Changes the opacity to zero
+  Changes the margin to 0 acganges the 
+*/
+
+body {
+  /*Box model stuff*/
+  margin: 0;
+  background-color: rgb(20, 18, 18);
+  /*Typography stuff*/
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.6rem;
+  /*Manipulations stuff*/
+
+  opacity: 0;
+  /*Miscellaneous*/
+  place-content: center;
+  /* -https://blog.hubspot.com/website/css-animation-examples */
+  /*    
+    This defines our animation. 
+    We define the animation-name as fade-in.
+    We define the animation-duration (how long the animation lasts) as 1 second.
+    We define the animation-timing-function (how the styling changes as it moves through the 
+    animation) as ease-in, which means it will slowly start the animation and speed up to the end. 
+    We define the animation-delay as 2 seconds.
+    We define the animation-fill-mode (whether the styling is kept at the end of the animation
+    or not) to forwards, which means to keep the styling that is at the end of the animation.        
+    Other animation properties that we do not define in this example are:                  
+    animation-iteration-count - how many times you want your animation to run                  
+    animation-direction - do you want your animation to go forward (normal)? Backward (reverse)?         
+    Forward and then backward (alternate)? Backward and then forward         
+    (alternate-reverse)?        
+    -Mr. Hardman    
+  */
+  -o-animation: fade-in 0.5s ease-in 1s forwards;
+  -moz-animation: fade-in 0.5s ease-in 1s forwards;
+  -webkit-animation: fade-in 0.5s ease-in 1s forwards;
+  animation: fade-in 0.5s ease-in 1s forwards;
+}
+
+/* 
+  Changes the opacity from 0 to 1 in a keyframes in opera
+*/
+@-o-keyframes fade-in {
+  from {
+    opacity: 0;
+    -o-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/* 
+  Changes the opacity from 0 to 1 in a keyframes in Firefox
+*/
+@-moz-keyframes fade-in {
+  from {
+    opacity: 0;
+    -moz-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/* 
+  Changes the opacity from 0 to 1 in a keyframes in Chrome
+*/
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/* 
+  Changes the opacity from 0 to 1 in a keyframes in Chrome
+*/
+
+/* 
+  This code creates a CSS animation named "fade-in" using the @keyframes rule.
+  The animation starts with an opacity of 0 and a vertical translation of -100px, and ends with an opacity of 100 and no vertical translation.
+  The animation is also specified for multiple vendor prefixes (-webkit, -moz, -o) to ensure cross-browser compatibility.
+*/
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+    -moz-transform: translateY(-100px);
+    -o-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 100;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/* 
+  This changes everything in the first heading tag to have a color of #ffffff (white).
+  It also changes the text to be centered and have the size of the font to be 40 pixels. 
+  Lastly, it changes the margin to be 1%.
+*/
+h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 40pt;
+  margin: 1%;
+}
+/* 
+  Changes the color and the space between the links
+  Changes the list style type to This changes everything in the unordered list to have a margin of 0, 
+  a padding of 0, background color of RBG (20, 18, 18).
+  This also changes the display to have flex and changes the justify-content to have a space around.
+  Changes overflow to hidden
+  Lastly this styles the flex-wrap to have wrap so the nav stacks when it gets smaller
+*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/* 
+  This Changes the flex to have 1 so it shrinks and grows
+  This also changes the position to relative and the font size the 5 rem.
+*/
+li {
+  position: relative;
+  font-size: 5rem;
+
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+/* 
+  This styles things in the list item and the anchor to have a color of white and centers the text. 
+  This changes the display to block and changes the top and bottom padding to be 10 pixels and
+  the left and right padding to be 100 pixels. Lastly, it makes it so there is no text decoration 
+  (for example, no underline on links). 
+*/
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 100px;
+  text-decoration: none;
+}
+
+/* 
+  This changes the scaleX on transform to zero before the transform happens  after it will become 1 but that is in the nav a:hover::before,
+  nav a:focus::before and this changes it to be on bottom right and the a:hover::before, nav a:focus::before changes to be bottom left                                           
+  
+  This also changes the content to have no text and changes the display to be block.
+  Changes the position to be absolute
+  Styles top=0, right=0, bottom=0, left=0, inset = 0 0 0 0
+  Styles the background color to be dark orange 
+  Changes z index to be -1
+  lastly it changes the transition speed to "transition: transform 0.3s ease;" an eases the transition in.
+  the transition lasts .3s and that is for the swiping animation  on the nav bar
+  -https://blog.hubspot.com/website/css-animation-examples
+*/
+nav a::before {
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: bottom right;
+  -moz-transform-origin: bottom right;
+  -ms-transform-origin: bottom right;
+  -o-transform-origin: bottom right;
+  transform-origin: bottom right;
+
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: darkorange;
+  z-index: -1;
+
+  /* autoprefixer: off */
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: -o-transform 0.3s ease;
+  -moz-transition: transform 0.3s ease, -moz-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease,
+    -moz-transform 0.3s ease, -o-transform 0.3s ease;
+}
+
+/* 
+  This changes the scaleX to become 1 when hovered and tabbed on and change from right to bottom left.
+  there are also all of the prefix's for those. This all happens when you either hover on the bottom or tab's on it
+*/
+nav a:hover::before,
+nav a:focus::before {
+  /* 
+    The next lines starting with -webkit-transform, -moz-transform, -ms-transform,
+    -o-transform, and transform are applying the style for different web browsers.
+    They are all doing the same thing which is scaling the line to the full width.
+
+    The last lines starting with -webkit-transform-origin, -moz-transform-origin, -ms-transform-origin,
+    -o-transform-origin, and transform-origin are also for different browsers.
+    They are setting the point where the scaling will happen to be at the bottom left of the line.
+  */
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+  -moz-transform-origin: bottom left;
+  -ms-transform-origin: bottom left;
+  -o-transform-origin: bottom left;
+  transform-origin: bottom left;
+}
+
+/* 
+  This changes the transition to change the background color in 0.3s
+  using ease-in-out
+*/
+.nav-link {
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* 
+  This styles things within the navigation and the anchor hover/anchor focus. 
+  It changes the font color to be black
+  when hovered or tabbed on.
+*/
+nav a:hover,
+nav a:focus {
+  color: black;
+}
+
+/*
+  This changes the line or the hr tag to become the color orange 
+  and border-color changes it for the other browsers.
+*/
+hr {
+  border-color: darkorange;
+  color: darkorange;
+}
+
+/* this changes things in the main to have a margin of 0 on the top and bottom and changes the sides to 2.5% */
+main {
+  margin: 0 2.5%;
+}
+
+/* 
+  This changes everything in the <section id="flex-container"> <section>
+  this also changes the text align to be center
+  Lastly this changes the font size to 30px
+*/
+#flex-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  text-align: center;
+
+  font-size: 30px;
+}
+
+/* 
+  This changes flex to have it as 1 and it also changes the display to flex
+  This changes the flex-direction to column.
+  This also changes the justify-content to flex-start
+  Lastly it changes the align items to center
+*/
+#multimedia-left {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* 
+  This is text-content. It is the second div on the center/main part of the webpage.
+  This also changes the background of the text content to be white so it is easier to read and it has a border-radius to 
+  round the edges of the border to 10px.
+  This changes the flex to be 1.5 so it ios bigger then the videos and pictures
+*/
+#text-content {
+  background-color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+
+  -webkit-box-flex: 1.5;
+  -webkit-flex: 1.5;
+  -moz-box-flex: 1.5;
+  -ms-flex: 1.5;
+  flex: 1.5;
+}
+
+/* 
+  This is multimedia-right. It is the third div on the right side of the webpage.
+  This changes flex to have it as 1 and it also changes the display to flex
+  This changes the flex-direction to column.
+  This also changes the justify-content to flex-start
+  Lastly it changes the align items to center
+*/
+#multimedia-right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* 
+  Changes the font and makes the text in the span italic and bold
+  This span also changes the font to be "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  This makes the font have a underline
+*/
+
+span {
+  font-style: bold;
+  font-style: italic;
+  text-decoration: underline;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/*
+  The class of all page pics changing the border and colors.
+  it changes the border to 5px ad makes the border solid and a color of darkorange.
+  This changes the padding to be 15 px.
+  this changes the border radius to be 10px
+  The background gets changed to rgb (29,28,26) also having a margin bottom of 2%
+*/
+.all-pages-pics {
+  border: 5px solid darkorange;
+  padding: 15px;
+
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+
+  background: rgb(29, 28, 26);
+  margin-bottom: 2%;
+}
+
+/*
+  The styling of the section where all of the facts are in the website, 
+  This styles the the text to center and changes margin to auto.
+  This changes the padding to 15 px and the border radius to 10px.
+  It changes the bottom margin to 1% "and the background to rgb(255, 255, 255) (white)"  <---- not anymore but keeping 
+  if i want the whole site as light mode.
+  
+*/
+section {
+  text-align: center;
+  margin: auto;
+  padding: 15px;
+
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+
+  margin-bottom: 1%;
+  /* background: RGB(255, 255, 255); */
+  /* 
+    float: auto; 
+    I am keeping this for later
+  */
+}
+
+/* This changes the second heading tag to have the text centered and changes the font size to 30 px */
+h2 {
+  color: #000000;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* 
+  This applies styling to all elements with the "p" tag. The text color is set to black (#000000), the text alignment is set to center,
+  and there is a padding of 20 pixels on the left and right of the text. The font size is set to 20 pixels.
+*/
+p {
+  color: #000000;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+}
+
+/* 
+  This changes everything in the anchor to have a font color of #1a1c1d. It also changes the size 
+  of the font to be 18 pixels. 
+*/
+a {
+  color: #1a1c1d;
+  font-size: 18px;
+}
+
+/* 
+  This changes everything inside of the back to top id to 
+  This code defines a CSS style for an element with the ID "back-to-top".
+  The style is set up to display the element as a flex container, with the items 
+  inside aligned to the center both horizontally and vertically.
+  The position of the element is set to be "sticky", which means it
+  will stay on the screen as the user scrolls, positioned at the bottom right corner of the webpage.
+  The width and height of the element are set to 80px, and it has a 2px solid black border with a radius of 40px making it round.
+  The background is set to a radial gradient with two different colors, and the font weight is set to bold,
+  text is aligned to center and text decoration is set to none. The element also has a transition effect on
+  the color and background when hovered over.
+  Additionally, the style also includes prefixes to ensure cross-browser compatibility. 
+*/
+#back-to-top {
+  /*Display stuff*/
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  /*
+    Positioning stuff
+    This allows us to make the position to be sticky of the Back to Top button
+    to the bottom right corner of the web page and makes it follow
+    the user as they scroll.
+    -Mr. Hardman
+  */
+  position: -webkit-sticky;
+  position: sticky;
+  left: 95%;
+  bottom: 30px;
+
+  /*Box model stuff*/
+  width: 80px;
+  height: 80px;
+  border: #121212 solid 2px;
+
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  border-radius: 40px;
+
+  /*
+    This allows us to style the background of the Back to Top
+    button to be a radial gradient because it is a round button.
+    The first color is at the center of the gradient and the second
+    color is at the edge of the round area. 
+    -Mr. Hardman
+  */
+  background: -moz-radial-gradient(#f5af19, #f12711);
+  background: -o-radial-gradient(#f5af19, #f12711);
+  background: -webkit-radial-gradient(#f5af19, #f12711);
+  background: radial-gradient(#f5af19, #f12711);
+
+  /*Typography stuff*/
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+
+  /* 
+    This makes the back to top button grow and shrink when hovered over
+  */
+  -webkit-transition: 1s ease-in-out, color 1s ease-in-out;
+  -o-transition: 1s ease-in-out, color 1s ease-in-out;
+  -moz-transition: 1s ease-in-out, color 1s ease-in-out;
+  transition: 1s ease-in-out, color 1s ease-in-out;
+}
+
+/* 
+  This changes the back to top when hovered or focus to change the width and height to 90px
+*/
+#back-to-top:hover,
+#back-to-top:focus {
+  width: 90px;
+  height: 90px;
+}
+
+#cleared {
+  /*
+    This allows us to style the background of the Back to Top
+    button to be a radial gradient because it is a round button.
+    The first color is at the center of the gradient and the second
+    color is at the edge of the round area. 
+    -Mr. Hardman
+  */
+  clear: left;
+}
+
+/* 
+  This changes the footer to have a background color of 29,26,26 and have a padding of 
+  10px and centers the text with text align center also the footer is for my copyright and 
+  this changes the color and centers the text 
+  Lastly the padding gets changed to 10px and the order to 4
+*/
+
+footer {
+  background: rgb(29, 26, 26);
+  padding: 10px;
+  -webkit-box-ordinal-group: 5;
+  -webkit-order: 4;
+  -moz-box-ordinal-group: 5;
+  -ms-flex-order: 4;
+  order: 4;
+  text-align: center;
+}
+
+/* Changes whatever is in the footer and small tag to change the font to white */
+footer small {
+  color: white;
+}
+
+/* 
+  This styles the #flex-container and the #text-content and the multimedia left and right.
+  It changes them when the width of the page becomes less then 800px
+*/
+@media all and (max-width: 800px) {
+  /* 
+    This changes the flex-direction to column
+  */
+  #flex-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  /* This styles the bottom of the margin to 30px*/
+  #text-content {
+    margin-bottom: 30px;
+  }
+
+  /* This styles the flex direction to row in the multimedia left and right */
+  #multimedia-left,
+  #multimedia-right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}

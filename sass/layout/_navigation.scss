@@ -1,0 +1,192 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  z-index: 1;
+
+  margin-bottom: 15px;
+
+  #nav__logo-link {
+    display: flex;
+    align-items: center;
+    width: 75px;
+
+    margin: 10px;
+
+    float: left;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  #overlay {
+    display: flex;
+    flex-direction: column;
+    
+    /* Code sourced from W3 Schools (https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp) */
+    position: fixed; /* Stay in place */
+    top: 0;
+    right: 0;
+
+    z-index: 1; /* Sit on top */
+
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    width: 0;
+    height: 100%;
+    
+    overflow: hidden; /* Disable scroll */
+    /* End of sourced code */
+
+    list-style: none;
+
+    #close-btn {
+      flex: 0 0.5;
+      a {
+        width: 10%;
+        margin-right: 10px;
+        margin-bottom: 0;
+
+        &:hover::before, &:hover::after {
+          transition: none;
+        }
+      }
+    }
+
+    li {
+      display: flex;
+      justify-content: center;
+
+      &:first-child {
+        justify-content: end;
+      }
+
+      /* Border draw code sourced from Giana (https://codepen.io/giana/pen/yYBpVY) */
+      a {
+        display: flex;
+        justify-content: center;
+
+        width: 60%;
+        margin-bottom: 2%;
+
+        position: relative;
+        vertical-align: middle;
+
+        &::before, &::after {
+          box-sizing: inherit;
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+        }
+
+        &::before {
+          top: 0;
+          left: 0;
+        }
+
+        &::after {
+          bottom: 0;
+          right: 0;
+        }
+
+        &:hover::before, &:hover::after {
+          width: 100%;
+          height: 100%;
+        }
+
+        &:hover::before {
+          transition:
+            width 0.125s ease-out, // Width expands first
+            height 0.125s ease-out 0.125s; // And then height
+        }
+
+        &:hover::after {
+          transition:
+            border-color 0s ease-out 0.25s, // Wait for ::before to finish before showing border
+            width 0.125s ease-out 0.25s, // And then exanding width
+            height 0.125s ease-out 0.375s; // And finally height
+        }
+      }
+    }
+  }
+
+  #open-btn {
+    width: 15%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  nav {
+    #overlay {
+      /* Code sourced from W3 Schools (https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp) */
+      /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+      width: 90%;
+
+      position: static;
+
+      z-index: 0;
+
+      overflow-x: visible;
+
+      transition: none;
+  
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      li {
+        width: 100%;
+        display: flex;
+        justify-content: stretch;
+
+        &:first-of-type {
+          display: none;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          
+          margin-bottom: 0;
+
+          &::before, &::after {
+            display: none;
+            box-sizing: border-box;
+            content: normal;
+
+            position: static;
+            
+            width: auto;
+            height: auto;
+          }
+
+          &::before {
+            top: auto;
+            left: auto;
+          }
+  
+          &::after {
+            bottom: auto;
+            right: auto;
+          }
+
+          &:hover::before, &:hover::after {
+            width: auto;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    #open-btn {
+      display: none;
+    }
+  }
+}

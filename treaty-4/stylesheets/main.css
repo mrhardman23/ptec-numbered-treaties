@@ -1,0 +1,431 @@
+/* 
+    For color I chose the colour #96a8bc 
+  from a triadic pallate with blue represent the sky, sea, and land.
+  Blue is associated with open space, freedom, and istitution, all thing associated with treaty.
+
+    As per our discussion, the dark purple is used as more of a neutral colour 
+  and by your direction it's also appart of my colour palate when used in big chunks (ie.nav).
+
+    I used light theme due to it implimenting information better and what images I
+  do have are manly information based.
+
+  -webki-_____ -moz-_____ -o-_____ helps make it more reliable across platforms and software
+*/
+
+/*
+  * styles all elements
+
+  line-height is the space between lines of text
+  line spacing set to 140% of the font size the element line-height
+
+  
+  margin will change the space from the ___ of the element to the bordar
+  margin set to none
+*/
+* {
+  line-height: 180%;
+  margin: 0;
+}
+
+/*
+  html styles the html element(root element)
+  
+  font-size style's the size of font
+  font size set to default font-size of 62.5 of default font size of the browser
+*/
+html {
+  font-size: 62.5%;
+}
+
+/* 
+  body will style the body element and all elements in it
+
+  margin set to auto to center it
+
+  width changes the set width
+  width set to 1000px
+
+  background-color styles the color of the background
+  the background color is set to #e3e1e4
+
+  color is the text color
+  the text color set to #ededed
+
+  the font size is set to 1.8 time the of the browser default
+
+  color sets text color
+  text color set to #302939
+
+  font-family styles the fonts
+  the font is set to Verdana, if not avalible Tahoma, then sans-serif defalt of the browser
+*/
+body {
+  margin: auto;
+  width: 1000px;
+  background-color: #e3e1e4;
+  font-size: 1.8rem;
+  color: #302939;
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
+/* 
+  header styles the head box with the nav
+
+  background-image to set background as an image
+
+  background-repeat: no-repeat; to stop it from repeating
+
+  background-size changes the size of the background
+  styled size, position of y and border
+*/
+header {
+  border: 3px solid #302939;
+  background-image: url(/images/Saskatchewan.jpg);
+  background-repeat: no-repeat;
+  background-position-y: 55%;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+}
+
+/* 
+  header h1 style the h1 in the header
+
+  margin of 10px
+
+  margin-bottem adds margin to bottem
+  no margin on bottem
+
+  font size of 3.8 time the browser default
+*/
+header h1 {
+  margin: 10px;
+  margin-bottom: 0px;
+  font-size: 3.8rem;
+}
+
+/* 
+  #_______ is id styling
+  #tab styles the tab id
+
+  background color set to #96a8bc
+
+  border-radius changes the corners roundness
+  corners set for 5 pixels of curve
+
+  float changes the side it should be put net to
+  float set to right
+
+  margin-right changes the margin on the right
+  margin right set to 10px
+*/
+#tab {
+  background-color: #96a8bc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  float: right;
+  margin-right: 10px;
+}
+
+/* 
+  #tab styles the tab id when hovered or tab through
+
+  text-decoration changes the text stuff like bold and underline
+  text decor set to none
+*/
+#tab:hover,
+#tab:focus {
+  text-decoration: none;
+}
+
+/* 
+  header h3 styles the h3 it the header
+
+  padding is the space from the border to the content
+  padding set to 10px on top and bottem and 15px on the sides
+*/
+header h3 {
+  float: right;
+  padding: 10px 15px;
+}
+
+/* 
+  #tab-content styles the tab-coontent id
+
+  display changes the display of the content box
+  display changed to none to not display
+
+  text-decoration changes the text stuff like bold and underline
+  text decor set to none
+*/
+#tab-content {
+  display: none;
+  text-decoration: none;
+}
+
+/* 
+    #tab:hover #tab-content #tab:focus #tab-content 
+  styles the tab-content id when tab id when hovered or tab through
+
+  width set to 150px
+*/
+#tab:hover #tab-content,
+#tab:focus #tab-content {
+  display: inline;
+  width: 150px;
+}
+
+/* 
+  #tab ul styles the ul in the tab id
+ 
+  list-style is how the list is styled
+  list styling set to none
+
+  float set to right
+
+  padding set to none
+*/
+#tab ul {
+  list-style: none;
+  float: right;
+  padding: 0;
+}
+
+/* 
+  #tab li styles the li in the tab id
+
+  padding set to 5px on top and bottem and 10px on sides
+*/
+#tab li {
+  padding: 5px 10px;
+}
+
+/* 
+  #tab li styles the li in the tab id when hovered or tabed through
+
+  background color set to #302939
+*/
+#tab li:hover,
+#tab li:focus {
+  background-color: #302939;
+}
+
+/*
+  #tab a styles the a in the tab id
+
+  text decor set to none
+
+  text color set to #302939
+*/
+#tab a {
+  text-decoration: none;
+  color: #302939;
+}
+
+/* 
+    #tab li:hover a #tab li:focus a styles the
+  a in the li when hovered or tabed through in the tab id
+ */
+#tab li:hover a,
+#tab li:focus a {
+  color: #faf9fa;
+}
+
+/*
+  Nav styles the nav bar
+
+  list-style is the styling that goes into the ul/ol
+  no list styling
+
+  display in an inline-flex box
+
+  margin of 10px
+
+  border adds and styles the border
+  boorder 2px thick and solid #302939
+
+  background-color set to #96a8bc
+*/
+nav {
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 10px;
+  margin-right: 0;
+  border: 2px solid #302939;
+  background-color: #96a8bc;
+}
+
+/* 
+  nav ul styles the ul in the nav to remove excess of spacing in margin and padding
+
+  display in an flex box
+
+  flex changes the leghth of flex
+  flex set to 1
+
+  margin of none
+  
+  padding set to none
+*/
+nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+  nav li styles the li in the nav
+
+  no list styling
+
+  display in an inline-flex
+*/
+nav li {
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+/* 
+  nav a:hover styles the nav link when hover over 
+  nav a:focus styles the nav link when tabed through
+
+  background-color set to faf9fa
+
+  text color set to #302939
+  
+  transition changes the transition of the change
+  backgound transition of 0.4s easing in and out
+*/
+nav a:hover,
+nav a:focus {
+  background-color: #faf9fa;
+  color: #302939;
+
+  transition: background-color 0.4s ease-in-out;
+  -o-transition: background-color 0.4s ease-in-out;
+  -moz-transition: background-color 0.4s ease-in-out;
+  -webkit-transition: background-color 0.4s ease-in-out;
+}
+
+/*
+  nav a styles nav a 
+  nav a:visited styles nav a after being visited
+
+  text  color set to #302939
+  
+  no text decoration
+
+  padding of 17px on top and bottem, 4px on left and right
+*/
+nav a,
+nav a:visited {
+  color: #302939;
+  text-decoration: none;
+  padding: 17px 15px;
+}
+
+/* 
+  styles the Id of active 
+  styles:hover the Id of active when hover over 
+  styles:focus the Id of active tabed through
+
+  text color set to #faf9fa
+
+  background color set to #302939
+*/
+#active,
+#active:hover,
+#active:focus {
+  color: #faf9fa;
+  background-color: #302939;
+}
+
+/*
+  section styles the sections
+
+  margin-top changes margin on top
+  margin on top of 5px
+
+  background color set to #faf9fa
+
+  border-radius curves the corners
+  border radius of 10px
+
+  padding of 10px
+*/
+section {
+  margin-top: 20px;
+  background-color: #faf9fa;
+  border: 5px solid #302939;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 20px 30px;
+}
+
+/* 
+  span styles all things in spans
+
+  font-weight changes the text thickness 
+  font changed to bold and it will make it well... bold
+*/
+span {
+  font-weight: bold;
+}
+
+/* 
+  footer styles the footer
+
+  margin of auto
+
+  text color of #faf9fa
+
+  width of 600px
+
+  background-color of #302939
+
+  padding of 10px
+*/
+footer {
+  margin: auto;
+  margin-top: 30px;
+  color: #faf9fa;
+  width: 600px;
+  background-color: #302939;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 20px 30px;
+}
+
+/* 
+  footer a styles a in footer 
+  footer a:hover styles a in footer when hoverd over
+  footer a:focus styles a in footer when tabed through
+
+  text color of #faf9fa
+*/
+footer a,
+footer a:hover,
+footer a:focus {
+  color: #faf9fa;
+}

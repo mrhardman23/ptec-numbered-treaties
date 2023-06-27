@@ -1,0 +1,110 @@
+<!--
+  Name: Vee Wright
+  Course: Web Development
+  Teacher: Mr. Hardman
+  School: Pembina Trails Early College
+  Date Last Modified: 10/01/23 (dd/mm/yy)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheets/stylesheet.css" />
+    <link rel="stylesheet" href="stylesheets/sun.css" />
+    <style>
+      /*span is used in second paragraph, will make text bold*/
+      span {
+        font-weight: bold;
+      }
+
+      /*sm-text class may be moved to external in future if needed on other pages, will make text small*/
+      .sm-text {
+        font-size: 2rem;
+      }
+
+      /*
+        map iframe, adds 6px space to bottom and top, none to sides.
+        makes a 3px border in a light green.
+        z-index bumps it on top of other items because without it it is hidden and it makes me sad.
+      */
+      iframe {
+        margin: 6px 0px;
+        border: 3px solid #c9e2ac;
+        z-index: 1;
+      }
+
+      /*
+        margin: 6 pixels on top and bottom with none on the sides.
+        adds same border as iframe
+      */
+      img {
+        margin: 6px 0px;
+        border: 3px solid #c9e2ac;
+      }
+    </style>
+    <title>Treaty 3 - Overview and Promises</title>
+  </head>
+  <body>
+    <!--All header CSS done in an external stylesheet for easy copy paste-->
+    <header>
+      <!--Here comes the sun ratata-->
+      <section id="sun">
+        <div id="sun-centre"></div>
+        <div id="sun-point-n"></div>
+        <div id="sun-point-e"></div>
+        <div id="sun-point-s"></div>
+        <div id="sun-point-w"></div>
+      </section>
+      <h1>Treaty 3</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" id="active">Overview and Promises</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="people.html">People</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Overview</h2>
+        <p>
+          Treaty 3, the North-West Angle Treaty, was signed on the 3rd of October 1873, by some Saulteaux peoples and the Government of Canada.
+          The Treaty covers part of South-East Manitoba and extends into Ontario. Treaty 3 obtained terms that exceeded the previous treaties
+          drastically and became the treaty which all others were based upon.
+        </p>
+
+        <iframe src="https://native-land.ca/api/embed/embed.html?maps=treaties&amp;name=treaty-3" width="646px" height="200px"></iframe>
+
+        <h2>Written and Verbal Promises</h2>
+        <!--this more detailed text is in a smaller font-->
+        <p class="sm-text">
+          <!--span is unique to this page, CSS is internal-->
+          The Government of Canada promised to set aside reserves with <span>one square mile</span> for each family of five, and to set up
+          monetary awards under the treaty's terms. With a one-time payment of <span>$12 per family</span> in cash, and another
+          <span>$5 per person</span>, annually. Funding for any necessary farming equipment and tools were also promised.
+        </p>
+        <p class="sm-text">
+          Despite the treaty being drawn with careful attention, not everything verbally promised to the Saulteaux appeared in writing. The
+          written version did not mention any conscriptions exemptions, or right to the Saulteaux's mineral extraction on their reserves. It
+          also failed to mention government provisions of food for celebrations at the annual payments, and that relatives in the United States
+          could be added to the treaty if they moved back into Canada within two years of the treaty being signed.
+        </p>
+      </section>
+
+      <img
+        src="images/Treaty3AreaMap.png"
+        alt="A picture of a map of treaty 3 close up, cities and towns are marked with blue dots, while 
+            Treaty 3 first nations areas are marked in red. There are a lot more red dots than blue."
+        width="646px" />
+    </main>
+
+    <!--All footer CSS done in external for easy copy paste.-->
+    <footer>
+      <p>&#169;Vee Wright</p>
+      <a href="https://www.thecanadianencyclopedia.ca/en/article/treaty-3" target="blank_"> Information from the Canadian Encyclopedia </a>
+    </footer>
+  </body>
+</html>

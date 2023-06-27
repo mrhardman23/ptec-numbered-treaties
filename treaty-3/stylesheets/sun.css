@@ -1,0 +1,459 @@
+/*
+  Section holding all sun components has an id of "sun". Position absolute removes it from the website structure
+  allowing it to move without disrupting other elements. Width and height are set to eliminate moving elements if
+  a different browser size is used. ANimation "sun-rises" is run with a cubic-bezier, allowing customisation of
+  speed. Other animation properties include a 12 second duration, stating that the animation will run forever, 
+  stating that it should run normally ("from" to "to") and stating it should'nt keep the start or end of the animation
+  as the elements form, though that most likely doesn't matter since the animation loops infinitely. 
+*/
+#sun {
+  position: absolute;
+
+  width: 48px;
+  height: 48px;
+
+  -webkit-animation: sun-rises 12s cubic-bezier(0.2, 0.1, 0.6, 0.4) 0s infinite normal none;
+  -moz-animation: sun-rises 12s cubic-bezier(0.2, 0.1, 0.6, 0.4) 0s infinite normal none;
+  -o-animation: sun-rises 12s cubic-bezier(0.2, 0.1, 0.6, 0.4) 0s infinite normal none;
+  animation: sun-rises 12s cubic-bezier(0.2, 0.1, 0.6, 0.4) 0s infinite normal none;
+}
+
+/*
+  Circle in the centre of the four triangles, 28 pixels squared with a slightly lighter yellow than the triangles.
+  Border radius rounds the edges of the default square until it's a circle. Position relative removes it out of 
+  the flow of the section so I can play around with positioning without messing up everything else. Top and left
+  adjust the positioning, moving it down and to the right (so intuitive) and a z-index of 1 allows it to overlap 
+  the triangles, creating a sun only slightly better than a five year old's.
+*/
+#sun-centre {
+  width: 28px;
+  height: 28px;
+  background-color: #eefe85;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  border-radius: 14px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+
+  z-index: 1;
+}
+
+/*
+  The of the sun points are very similar other than different top and left values, so I'll only comment the bulk of 
+  this once. The triangles are created out of the border instead of the box, so we need width 0 to get the third 
+  point of the triangle. Since this specific triangle points up, that is the border we don't need.
+  The left and right borders are both transparent, and the bottom border is the only one that needs to be shown.
+  the bottom border has a width of 12 pixels and that will be the height of our triangle. The positioning is 
+  set to relative, again, so it doesn't mess with the flow of the other elements and I can position it as needed.
+  Messing around with the top and left attributes -28px and 18px finally got it to where it needs to be. 
+  Its animation makes it grow and shrink to add more dynamics (it makes a difference I promise) and this animation
+  lasts for two seconds eases-in and eases-out, which iss again for dynamics and to make it more interesting.
+  it runs infinitely because it would be weird if it stopped (you may not know when it's running but you would if
+  it stopped it is bad) there's a .2 second delay between each loop of the animation. It runs alternately 
+  so I only need two keyframes in the actual animation instead of writing out that it has to shrink. Finally, 
+  it keeps the last keyframe it ended on.
+*/
+#sun-point-n {
+  width: 0px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid #f4f79a;
+
+  position: relative;
+  top: -28px;
+  left: 18px;
+
+  -webkit-animation: sun-n 2s ease-in-out infinite 0.2s alternate both;
+  -moz-animation: sun-n 2s ease-in-out infinite 0.2s alternate both;
+  -o-animation: sun-n 2s ease-in-out infinite 0.2s alternate both;
+  animation: sun-n 2s ease-in-out infinite 0.2s alternate both;
+}
+/*
+  Extremely similar to sun-point-n, differences are border left is the visible border and the top and bottom
+  borders are the transparent ones, same positioning type, relative, though the positioning itself is 
+  different. Different animation due to the fact that the different borders have to grow differently and
+  there are needed shifts in position that are different for each element.
+*/
+#sun-point-e {
+  width: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 12px solid #eff1a3;
+
+  position: relative;
+  top: -22px;
+  left: 36px;
+
+  -webkit-animation: sun-e 2s ease-in-out infinite 0.2s alternate both;
+  -moz-animation: sun-e 2s ease-in-out infinite 0.2s alternate both;
+  -o-animation: sun-e 2s ease-in-out infinite 0.2s alternate both;
+  animation: sun-e 2s ease-in-out infinite 0.2s alternate both;
+}
+/*
+  Extremely similar to sun-point-n, differences are border top is the visible border and the left and right
+  borders are the transparent ones, same positioning type, relative, though the positioning itself is 
+  different. Different animation due to the fact that the different borders have to grow differently and
+  there are needed shifts in position that are different for each element.
+*/
+#sun-point-s {
+  width: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 12px solid #eff1a3;
+
+  position: relative;
+  top: -16px;
+  left: 18px;
+
+  -webkit-animation: sun-s 2s ease-in-out infinite 0.2s alternate both;
+  -moz-animation: sun-s 2s ease-in-out infinite 0.2s alternate both;
+  -o-animation: sun-s 2s ease-in-out infinite 0.2s alternate both;
+  animation: sun-s 2s ease-in-out infinite 0.2s alternate both;
+}
+/*
+  Extremely similar to sun-point-e, differences are border right is the visible border, same positioning type, relative, though the positioning itself is 
+  different. Different animation due to the fact that the different borders have to grow differently and
+  there are needed shifts in position that are different for each element.
+*/
+#sun-point-w {
+  width: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 12px solid #eff1a3;
+
+  position: relative;
+  top: -46px;
+
+  -webkit-animation: sun-w 2s ease-in-out infinite 0.2s alternate both;
+  -moz-animation: sun-w 2s ease-in-out infinite 0.2s alternate both;
+  -o-animation: sun-w 2s ease-in-out infinite 0.2s alternate both;
+  animation: sun-w 2s ease-in-out infinite 0.2s alternate both;
+}
+
+/*
+  The sun-rises animation controls the movement of the sun shifting it from off-screen on the top left,
+  to off-screen on the top-centre. It can be seen in between those two points turning slowly.
+*/
+@-webkit-keyframes sun-rises {
+  from {
+    -webkit-transform: translate(-48px, 24px) rotate(20deg);
+    transform: translate(-48px, 24px) rotate(20deg);
+  }
+  to {
+    -webkit-transform: translate(228px, -82px) rotate(240deg);
+    transform: translate(228px, -82px) rotate(240deg);
+  }
+}
+
+@-moz-keyframes sun-rises {
+  from {
+    -moz-transform: translate(-48px, 24px) rotate(20deg);
+    transform: translate(-48px, 24px) rotate(20deg);
+  }
+  to {
+    -moz-transform: translate(228px, -82px) rotate(240deg);
+    transform: translate(228px, -82px) rotate(240deg);
+  }
+}
+
+@-o-keyframes sun-rises {
+  from {
+    -o-transform: translate(-48px, 24px) rotate(20deg);
+    transform: translate(-48px, 24px) rotate(20deg);
+  }
+  to {
+    -o-transform: translate(228px, -82px) rotate(240deg);
+    transform: translate(228px, -82px) rotate(240deg);
+  }
+}
+
+@keyframes sun-rises {
+  from {
+    -webkit-transform: translate(-48px, 24px) rotate(20deg);
+    -moz-transform: translate(-48px, 24px) rotate(20deg);
+    -o-transform: translate(-48px, 24px) rotate(20deg);
+    transform: translate(-48px, 24px) rotate(20deg);
+  }
+  to {
+    -webkit-transform: translate(228px, -82px) rotate(240deg);
+    -moz-transform: translate(228px, -82px) rotate(240deg);
+    -o-transform: translate(228px, -82px) rotate(240deg);
+    transform: translate(228px, -82px) rotate(240deg);
+  }
+}
+
+/*
+  The sun-n animation controls the growth and shrink of the sun's north point. The triangle expands through
+  increasing the border size, as there is no actual content to scale. Unfortunately this also causes added 
+  space to be taken up by the element. Thus resulting in the translate being necessary to shift it away from other
+  elements and minimize their movement.
+*/
+@-webkit-keyframes sun-n {
+  from {
+    border-bottom: 12px solid #eff1a3;
+
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    border-bottom: 14px solid #eff1a3;
+
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+
+@-moz-keyframes sun-n {
+  from {
+    border-bottom: 12px solid #eff1a3;
+
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    border-bottom: 14px solid #eff1a3;
+
+    -moz-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+
+@-o-keyframes sun-n {
+  from {
+    border-bottom: 12px solid #eff1a3;
+
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    border-bottom: 14px solid #eff1a3;
+
+    -o-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes sun-n {
+  from {
+    border-bottom: 12px solid #eff1a3;
+
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    border-bottom: 14px solid #eff1a3;
+
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+
+/*
+  Similar to sun-n though it is adjusted to change the size of border-left instead of border-bottom 
+  and for different movement.
+*/
+@-webkit-keyframes sun-e {
+  from {
+    border-left: 12px solid #eff1a3;
+
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  to {
+    border-left: 14px solid #eff1a3;
+
+    -webkit-transform: translate(1px, -2px);
+    transform: translate(1px, -2px);
+  }
+}
+
+@-moz-keyframes sun-e {
+  from {
+    border-left: 12px solid #eff1a3;
+
+    -moz-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  to {
+    border-left: 14px solid #eff1a3;
+
+    -moz-transform: translate(1px, -2px);
+    transform: translate(1px, -2px);
+  }
+}
+
+@-o-keyframes sun-e {
+  from {
+    border-left: 12px solid #eff1a3;
+
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  to {
+    border-left: 14px solid #eff1a3;
+
+    -o-transform: translate(1px, -2px);
+    transform: translate(1px, -2px);
+  }
+}
+
+@keyframes sun-e {
+  from {
+    border-left: 12px solid #eff1a3;
+
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  to {
+    border-left: 14px solid #eff1a3;
+
+    -webkit-transform: translate(1px, -2px);
+    -moz-transform: translate(1px, -2px);
+    -o-transform: translate(1px, -2px);
+    transform: translate(1px, -2px);
+  }
+}
+
+@-webkit-keyframes sun-s {
+  from {
+    border-top: 12px solid #eff1a3;
+
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    border-top: 14px solid #eff1a3;
+
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+}
+
+/*
+  Similar to sun-n though it is adjusted to change the size of border-top instead of border-bottom 
+  and for different movement.
+*/
+@-moz-keyframes sun-s {
+  from {
+    border-top: 12px solid #eff1a3;
+
+    -moz-transform: translateY(0);
+
+    transform: translateY(0);
+  }
+  to {
+    border-top: 14px solid #eff1a3;
+
+    -moz-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+}
+
+@-o-keyframes sun-s {
+  from {
+    border-top: 12px solid #eff1a3;
+
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    border-top: 14px solid #eff1a3;
+
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes sun-s {
+  from {
+    border-top: 12px solid #eff1a3;
+
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    border-top: 14px solid #eff1a3;
+
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+}
+
+/*
+  Similar to sun-n though it is adjusted to change the size of border-right instead of border-bottom 
+  and for different movement.
+*/
+@-webkit-keyframes sun-w {
+  from {
+    border-right: 12px solid #eff1a3;
+
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  to {
+    border-right: 14px solid #eff1a3;
+
+    -webkit-transform: translate(-1px, -4px);
+    transform: translate(-1px, -4px);
+  }
+}
+
+@-moz-keyframes sun-w {
+  from {
+    border-right: 12px solid #eff1a3;
+
+    -moz-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  to {
+    border-right: 14px solid #eff1a3;
+
+    -moz-transform: translate(-1px, -4px);
+    transform: translate(-1px, -4px);
+  }
+}
+
+@-o-keyframes sun-w {
+  from {
+    border-right: 12px solid #eff1a3;
+
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  to {
+    border-right: 14px solid #eff1a3;
+
+    -o-transform: translate(-1px, -4px);
+    transform: translate(-1px, -4px);
+  }
+}
+
+@keyframes sun-w {
+  from {
+    border-right: 12px solid #eff1a3;
+
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  to {
+    border-right: 14px solid #eff1a3;
+
+    -webkit-transform: translate(-1px, -4px);
+    -moz-transform: translate(-1px, -4px);
+    -o-transform: translate(-1px, -4px);
+    transform: translate(-1px, -4px);
+  }
+}

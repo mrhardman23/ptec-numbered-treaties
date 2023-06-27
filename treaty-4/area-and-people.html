@@ -1,0 +1,298 @@
+<!--
+  Name: Harrison Gutscher
+  Course: Web Development
+  Teacher: Scott Hardman
+  School: PTec
+  Date Last Modified: 1/18/2023
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Area and People</title>
+    <!-- main style sheet implementation -->
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <!-- style is internal styling -->
+    <style>
+      /* 
+        #______ is id styling
+        #gate styles the id gate
+
+        display changes the display of the content box
+        display changed to flex
+
+        border-radius changes the corners roundness
+        corners set for 10 pixels of curve
+
+        margin is the space from the border to the edge
+        margin set to auto to center it
+
+        margin-top changes the margin on top
+        top margin set to 20px
+
+        width changes the set width
+        width set to 290px
+
+        height changes the set height
+        height set to 220px
+
+        border changes the border
+        boder is set to 3px and solid #302939
+
+        align-self changes the alignmet 
+        alignmet set to center
+      */
+      #gate {
+        display: flex;
+        border-radius: 10px;
+        margin: auto;
+        margin-top: 20px;
+        width: 290px;
+        height: 220px;
+        border: 3px solid #302939;
+        background-color: #faf9fa;
+        align-self: center;
+      }
+
+      /*
+        id map-image1 and  map-image2 styling for map adjustments
+
+        border-radius of 10px
+
+        margin set to auto to center
+
+        margin-top set to 20px
+
+        width of 490px
+
+        height of 430px
+
+        border 3px thick and solid #302939
+
+        background-color of #faf9fa
+      */
+      #map-image1,
+      #map-image2 {
+        border-radius: 10px;
+        margin: auto;
+        margin-top: 20px;
+        width: 490px;
+        height: 430px;
+        border: 3px solid #302939;
+        background-color: #faf9fa;
+      }
+
+      /*
+        id map-image1 and  map-image2 styling for map adjustments when hovered over
+
+        position changes the position
+        position set to fixed to be fixed
+
+        border-radius of 10px
+
+        width of 490px
+
+        height of 430px
+
+        border 3px thick and solid #302939
+
+        background-color of #faf9fa
+
+        transform changes a proporty of size, posision, or color
+        scale set to 2.1 multiple
+      */
+      #map-image1:hover,
+      #map-image1:focus {
+        position: fixed;
+        bottom: 20%;
+        right: 0;
+        left: 0;
+        border-radius: 10px;
+        width: 490px;
+        height: 430px;
+        border: 3px solid #302939;
+        background-color: #faf9fa;
+
+        transform: scale(2.1);
+        -o-transform: scale(2.1);
+        -ms-transform: scale(2.1);
+        -moz-transform: scale(2.1);
+        -webkit-transform: scale(2.1);
+      }
+    </style>
+  </head>
+  <!-- body for content -->
+  <body>
+    <!-- header form title and navigation -->
+    <header>
+      <h1>Treaty Number 4</h1>
+
+      <div id="tab" tabindex="0">
+        <h3>Other resources</h3>
+        <div id="tab-content">
+          <br />
+          <!-- ul to formate sources -->
+          <ul>
+            <li>
+              <!-- LABRC interactive map source -->
+              <a href="https://labrc.com/map/" target="_blank">
+                LABRC interactive map
+              </a>
+            </li>
+            <li>
+              <!-- NAAWI-OODENA source -->
+              <a
+                href="https://www.clc-sic.ca/real-estate/naawi-oodena"
+                target="_blank">
+                NAAWI-OODENA
+              </a>
+            </li>
+            <li>
+              <!-- Traditional First Nation Community Names source -->
+              <a href="https://mfnerc.org/community-map/" target="_blank">
+                Traditional First Nation Community Names
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- nav for navigation bar -->
+      <nav>
+        <!-- ul>li>a> to list page links/navigation -->
+        <ul>
+          <li>
+            <!-- first  page link -->
+            <a href="index.html">Home Page</a>
+          </li>
+          <li>
+            <!-- this page link -->
+            <a href="area-and-people.html" id="active">Area and People</a>
+          </li>
+          <li>
+            <!-- filler link -->
+            <a href="development.html">Development </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- main for main content-->
+    <main>
+      <!-- 
+        section to oginize/separate content 
+        first section
+      -->
+      <section>
+        <h2>Area and People</h2>
+        <p>
+          These two maps show <span>Treaty 4</span> relative to the other 10
+          treatys and to current day provinces.The area is upon the majority of
+          the bottom of Saskatchewan and a little bit of the south of Alberta
+          and Manitoba. Treaty number 4 was negotiated at Fort Qu’Appelle and
+          Fort Ellice.
+        </p>
+        <img
+          src="/images/Fort Quappelle.PNG"
+          alt="The front gate of Fort  Qu’Appelle made of wood on a snow covered hill"
+          id="gate" />
+      </section>
+      <!-- img of Map of Canada and the 11 Treaties of Canada areas-->
+      <img
+        src="images/numbered-treaties-map.png"
+        alt="Map of Canada and the 11 Treaties of Canada areas"
+        id="map-image1"
+        tabindex="0" />
+      <!-- img of Map of lower half of Alberta, Saskatchewan, and maitoba with a 4th treaty area -->
+      <img
+        src="images//numbered-treaty-4-map.png"
+        alt="Map of lower half of Alberta, Saskatchewan, and maitoba with a 4th treaty area"
+        id="map-image2"
+        tabindex="0" />
+
+      <br />
+
+      <!-- 
+        section to oginize/separate content 
+        second section
+      -->
+      <section>
+        <p>
+          There are 35 first nations who live in parts of Alberta, southern
+          Saskatchewan, and western Manitoba where
+          <span>Treaty 4</span> applies. The total of 245.1 acres of land from
+          15 reserves with a total of 2016 for population.
+          <span>Treaty 4</span> however is an estimate of 195,000 km².
+          Considering that roughly 250 acres goes into one square kilometre I
+          personally think that the Canadian government was shortcoming.
+        </p>
+      </section>
+
+      <br />
+    </main>
+    <!-- footer for source and copy rights and stuff -->
+    <footer>
+      <!-- sources -->
+      <h3>Sources</h3>
+      <!-- ul to formate sources -->
+      <ul>
+        <li>
+          <!-- gov of ca source -->
+          <a
+            href="https://www.rcaanc-cirnac.gc.ca/eng/1100100028689/1581293019940"
+            target="_blank">
+            Governement of Canada - Treaty Texts: Treaty No.4
+          </a>
+        </li>
+        <li>
+          <!-- the ca encyclopedia source -->
+          <a
+            href="https://www.thecanadianencyclopedia.ca/en/article/treaty-4"
+            target="_blank">
+            The Canadian Encyclopedia - Treaty 4
+          </a>
+        </li>
+        <li>
+          <!-- Open Library source -->
+          <a
+            href="https://ecampusontario.pressbooks.pub/indigstudies/chapter/numbered-treaties/"
+            target="_blank">
+            Open Library - Numbered Treaties
+          </a>
+        </li>
+        <li>
+          <!-- Treaty Relations Commission of Manitoba source -->
+          <a
+            href="https://trcm.ca/lets-talk-treaties/treaties-with-the-crown/"
+            target="_blank">
+            Treaty Relations Commission of Manitoba - Number Treaties
+          </a>
+        </li>
+        <li>
+          <!-- Southern Chiefs' Organization Inc source -->
+          <a href="https://scoinc.mb.ca/treaties/" target="_blank">
+            Southern Chiefs' Organization Inc - Treaties
+          </a>
+        </li>
+        <li>
+          <!-- Treaty Relations Commission of Manitoba source -->
+          <a
+            href="https://storymaps.arcgis.com/stories/3a6048e38dae4afd8def879b63f2b1b5"
+            target="_blank">
+            Treaty Relations Commission of Manitoba - Whats your story? - Treaty
+            4
+          </a>
+        </li>
+        <li>
+          <!-- George Gordon First Nation source -->
+          <a href="https://ggfn.ca/" target="_blank">
+            George Gordon First Nation
+          </a>
+        </li>
+      </ul>
+      <p>&#169;Harrison Gutscher</p>
+    </footer>
+  </body>
+</html>

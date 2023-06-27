@@ -1,0 +1,243 @@
+/* 
+  NOTE: For this webpage I have chosen to use a monochromatic colour scheme, using the colours red and gray. The red has 
+  been chosen because it is often seen as a very strong colour, used when you want to pull attention to something. 
+  In addition, it is a similar colour located on many Indigenous creations and symbols such as the medicine wheel 
+  and the bottom right of the treaty flag, thus I thought it would work well with the theme. The secondary colour,
+  grey, pairs well with the red, and has been selected for many of the same reasons. In addition, grey is supposed 
+  to represent strength and add a balancing effect to the webpage. Light theme is used rather than dark theme as there are 
+  large chunks of text that would be harder to read otherwise. As I wanted the website to come across as a modern
+  take on the information given, I decided that a sans-serif font family would work best.
+
+  All colours (including those on the figcaptions of the transition) have varied contrast for good readability.
+*/
+
+/* Styles all elements to have a line height of 140% to improve readability. */
+* {
+  line-height: 140%;
+  word-spacing: 1.2px;
+  letter-spacing: 0.3px;
+}
+
+/* 
+  This styles the html element (the root element) to have a font size of 62.5% 
+  of the default font size of the browser.
+*/
+html {
+  font-size: 62.5%;
+}
+
+/* 
+  This styles the body element to have no margin and sets the font to Arial, or if thats not available, Helevetica,
+  and if neither is available, sans-serif. The background colour is set to an off-white, and the font size to 1.8 rem, 
+  (1.8 times the size of the root element's font size).
+*/
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ededed;
+  font-size: 1.8rem;
+}
+
+/*
+  This aligns the header to the center of the page horizontally, and sets a red background colour as well as an 
+  off-white text colour, with a small amount of padding. The contrast rate between the white and the red is 7.1:1.
+*/
+header {
+  text-align: center;
+  background-color: #991a20;
+  color: #ededed;
+  padding: 1px;
+}
+
+/*
+  This hides the overflow of the content, in other words not showing what doesn't fit. It also sets the background
+  colour of the navigation bar to gray. The contrast of the navigation bar background to the white links is 8.8:1. 
+*/
+nav {
+  overflow: hidden;
+  background-color: #414042;
+}
+
+/*  Gets rid of any styling for the list (Takes away the list dots). */
+nav ul {
+  list-style: none;
+}
+/* 
+  Sets the list items within the navigation bar to be inline-block, which allows them to have specified width and
+  heights as well as top/bottom margin and paddings.
+*/
+nav li {
+  display: inline-block;
+}
+
+/* 
+  Floats all the navigation links to the left of the bar, giving them an off-white font colour and then aligning 
+  the text within to the center of the element. It then gives the top/bottom a padding of 2px, and the left and 
+  right padding of 16px.
+*/
+nav a {
+  float: left;
+  color: #ededed;
+  text-align: center;
+  padding: 2px 16px;
+  text-decoration: none;
+}
+
+/* 
+  Changes the colours of the nav li when either focused or hovered over, (placing the mouse above or tabbing
+  to the links). 
+*/
+nav a:hover,
+nav a:focus {
+  color: #ddd;
+}
+
+/* This turns the active link to a slightly darker gray of #aaa. */
+nav a:active {
+  color: #aaa;
+}
+
+/* 
+  Styling for the top images on each webpage. These give the top a padding of 20px and then give them margin:auto, which horizontally centers it.
+*/
+.top-images {
+  padding-top: 50px;
+  margin: auto;
+}
+
+/* 
+  NOTE: I was originally planning to do an image carousel for the transition/animation of the page. I did finish, however I was unable to
+  tab through the finished product properly and when I attempted to navigate the page with a screen reader the aria-labels and roles were 
+  not reading properly either. As such, I decided the best thing to do was to take the portion of the carousel that was functioning 
+  (the figcaption transitions) in order to insure that the page was still accessible to everyone. Hopefully this works okay as the 
+  self-assessment mentions it can be a transition or animation. I have built upon what we learned in class by applying the transition to
+  figcaptions and experimenting with different positioning and looking at different transition effects.
+
+  The following code selects all figures (the top images on each page) and styles their positions to be relative and have a width
+  equivalent to the actual image. The height is set to 580px, and the overflow is hidden in order to prevent the image from going outside the 
+  specified measurements. Then, margin is set to auto to center the image.
+*/
+figure {
+  position: relative;
+  width: 1150px;
+  height: 580px;
+  overflow: hidden;
+  margin: auto;
+}
+
+/* 
+  Sets the figcaptions to position:absolute so that it can be positioned with bottom (-60px) and left (30px). The transition provides for a 
+  smooth flow of the caption moving upwards, which lasts for one second and eases in and out, meaning it is slow at the start and the end.
+  Padding is applied to the figcaption to ensure that the text is not pressed against the sides of the figure.
+*/
+figure figcaption {
+  position: absolute;
+  bottom: -60px;
+  left: 30px;
+  width: 1150px;
+  height: 50px;
+
+  -webkit-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  background: rgba(0, 0, 0);
+  padding-top: 12px;
+  padding-left: 15px;
+}
+
+/*
+  When the figure is hovered over or focused on, the figcaption bottom becomes 0. This pushes the figcaption upwards from it's original position of
+  bottom: -60; and the transition is applied. The text is set to an off-white colour, and the background to pure black. However, as the 
+  background is only at 0.8 opacity, it appears as more of a gray on the image below.
+*/
+figure:hover figcaption,
+figure:focus figcaption {
+  bottom: 0px;
+  color: #ededed;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Sets padding expectations for images, paragraphs, and h2's to 16px on the left side. */
+img,
+p,
+h2,
+iframe {
+  padding-left: 30px;
+}
+
+/* 
+  Sets 10px of padding to the bottom of the iframe in order to allow the paragraph underneath to be less
+  crowded.
+*/
+iframe {
+  padding-bottom: 10px;
+}
+
+/*
+  Additional spacing added above this header to emphasize the image of the treaty medal (located above the header).
+  This effects all elements with a class of "numbered-treaties-header" which are the two highest h2's on each page,
+  and gives them a top margin of 80px.
+*/
+.numbered-treaties-header {
+  margin-top: 80px;
+}
+
+/* 
+  This effects both of the maps that are displayed on the webpages, as they both have a class of "map-of-treaties".
+  This makes them stay on the right of the screen with float:right; and gives them a top/bottom padding of 5px and 
+  a right/left padding of 50px.
+*/
+.map-of-treaties {
+  float: right;
+  padding: 5px 50px;
+}
+
+/* 
+  This styles all h2's to have a font size of 22px, a size that is fitting because it is about a third smaller
+  than the h1. It then gives each header a 30px padding on top to space it out from other paragraphs.
+*/
+h2 {
+  font-size: 22px;
+  padding-top: 30px;
+}
+
+/* 
+  Styles all paragraphs to have a font size of 16.5 px, a fitting font size because it is visible and clear to read.
+  It gives a margin of 1px, and padding on the right of each paragraph 60px to space it from the treaty maps images.
+  Theres is also a bottom padding given to each paragraph in order to space the paragraphs nicely and distinguish 
+  between each one.
+*/
+p {
+  font-size: 16.5px;
+  margin: 1px;
+  padding-right: 60px;
+  padding-bottom: 40px;
+}
+
+/* Styles anything within a span tag to be underlined and italic. */
+span {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+/* 
+  Styles the footer to be the same dark red as the header and the text colour to an off-white. It also sets 20px of
+  padding at the bottom to space the text from the bottom of the screen.
+*/
+footer {
+  background-color: #991a20;
+  color: #ededed;
+  padding-bottom: 20px;
+}
+
+/* Sets padding at the bottom of the paragraphs within the footer to 0px, giving less space within the footer. */
+footer p {
+  padding-bottom: 0px;
+}
+
+/* Sets the footer anchors to an off-white colour. */
+footer a {
+  color: #ededed;
+}

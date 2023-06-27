@@ -1,0 +1,97 @@
+body {
+  background-color: $main-background;
+}
+
+nav {
+  background-color: scale-color($color: $main-background, $lightness: -4%);
+  box-shadow: 0 2px 5px #121212;
+
+  #overlay {
+    background-color: $dark-primary-color;
+    background-color: $mobile-nav-bg-color;
+
+    #close-btn {
+      a {
+        &:hover::before, &:hover::after {
+          border: 0 solid transparent;
+        }
+      }
+    }
+
+    li {
+      a {
+        background: none;
+        color: scale-color($color: $main-background, $lightness: -4%);
+
+        border: 0;
+
+        &::before, &::after {
+          border: 2px solid transparent;
+        }
+
+        &:hover::before {
+          border-top-color: scale-color($color: $main-background, $lightness: -4%);
+          border-right-color: scale-color($color: $main-background, $lightness: -4%);
+        }
+
+        &:hover::after {
+          border-bottom-color: scale-color($color: $main-background, $lightness: -4%);
+          border-left-color: scale-color($color: $main-background, $lightness: -4%);
+        }
+      }
+    }
+  }
+  #open-btn {
+    color: $dark-primary-color;
+  }
+}
+
+#title-card {
+  background-color: $dark-background;
+  color: $font-color-dark-bg;
+}
+
+#grid-item__left, #grid-item__right {
+  div, h2 {
+    background-color: scale-color($color: $main-background, $lightness: -4%);
+    color: $dark-primary-color;
+  }
+}
+
+footer {
+  background-color: scale-color($color: $main-background, $lightness: -4%);
+  color: $dark-primary-color;
+}
+
+@media screen and (min-width: 850px) {
+  nav {
+    #overlay {
+      background-color: transparent;
+
+      li {
+        border-right: 2px solid $dark-primary-color;
+
+        &:nth-of-type(9) {
+          border-right: 0;
+        }
+
+        a {
+          color: $dark-primary-color;
+
+          &::before, &::after {
+            border: 0;
+          }
+
+          &:hover::before, &:hover::after {
+            border: 0 solid transparent;
+          }
+
+          &:hover {
+            color: scale-color($color: $main-background, $lightness: -4%);
+            background-color: $dark-primary-color;
+          }
+        }
+      }
+    }
+  }
+}

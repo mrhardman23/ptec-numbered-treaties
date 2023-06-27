@@ -1,0 +1,275 @@
+/* 
+  Explainations:
+    Colour: 
+      My primary colour is a dark maroon. It is used for <h1> headings, as well as borders and horizontal rules.
+      My secondary colour is a lighter maroon-ish colour. It is used for the active page on my nav bar.
+      This is a monochromatic colour scheme.
+    Colour psychology:
+      The article given did not contain maroon, so I used this website instead: https://www.colorpsychology.org/maroon/
+      I used maroon (dark red-brownish) because it represents feelings of warmth, strength, and courage. It is also a colour often used by 
+      indiginous peoples for traditional clothing and art. It is also a part of the medicine wheel. These connections with 
+      indiginous people, as well as the colour psychology of warmth, strength, and courage, is why I picked it.
+    Typography: 
+      I used a combination of serif and sans-serif fonts. A modern serif font is used for headings and a sans-serif font is
+      used for paragraphs and other text. This provides a clear visual hierarchy. It also combines the trustworthy and reliable
+      look of the serif font, with the youthful and accessible appearence of a sans-serif font.
+    Other notes:
+      The map on index.html page may look like colour is the only way used to represent information, but the borders of the treaties
+      are clear, even without any colour.
+*/
+
+/* 
+  "This will style all elements to have line-height
+  of 160% of the font size of the element"
+  - Mr. Hardman
+*/
+* {
+  line-height: 160%;
+}
+
+/* 
+  max-width; sets the maximum width of content on the website (fixed width layout) 
+  margin: auto; centers all content by splitting space equally between right and left sides
+  font-size 62.5%; "sets the font size of the root element to 62.5% of the default font size for the browser" - Mr. Hardman
+*/
+html {
+  max-width: 960px;
+  margin: auto;
+  font-size: 62.5%;
+}
+
+/*
+  This section styles all elements in the body of the website (everything)
+    background-color: changes the background colour to an off-white for the website 
+    color: changes the font colour to a neutral near-black
+    font-size: 1.6rem; sets the font size to 1.6 times the root font size, or 16px
+*/
+body {
+  background-color: #f7f3ee;
+  color: #141414;
+  font-size: 1.7rem;
+}
+
+/* 
+  importing two typefaces from truetype files 
+    source: https://www.geeksforgeeks.org/how-to-include-a-font-ttf-using-css/
+
+    font-family specifies the name of the imported typeface
+    src: url( ) specifies the path of the .ttf file
+*/
+@font-face {
+  font-family: roboto-slab-light;
+  src: url(/typeface/roboto-slab/roboto-slab-regular.ttf);
+}
+@font-face {
+  font-family: roboto-regular;
+  src: url(/typeface/roboto/roboto-regular.ttf);
+}
+
+/* 
+  style for top navigation menu
+    source: https://www.w3schools.com/Css/css_navbar.asp 
+    background-color: ; sets the background colour for the nav bar
+    overflow: hidden; "prevents navigation bar from collapsing when it has floated children." - Stackoverflow user hungerstar
+      https://stackoverflow.com/questions/43007817/why-do-i-have-to-add-overflowhidden-to-make-the-navigation-bar-visible-on-the
+*/
+#top-nav {
+  background-color: #e2d9cc;
+  overflow: hidden;
+}
+/* 
+  list-style-type: none; makes it so it displays no bullet points 
+  margin: 0; padding: 0; sets margin and padding to 0 for no extra spacing
+    margin is spacing on the outside of the element's border
+    padding is spacing between the border and the content itself
+*/
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+  float: left; floats nav links left
+  color: #1d1d1d; sets the font color to a near black 
+  padding: 16px; adds padding around the text to increase the button size
+  text-decoration: none; removes the underline on links
+  font-size: 1.7rem; set font size to 1.7 times the default (root) font size, or 17px
+  font-family: roboto-regular, sans serif; set typeface to roboto-regular with sans serif as a fallback
+*/
+#top-nav a {
+  float: left;
+  color: #1d1d1d;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-family: roboto-regular, sans-serif;
+}
+/* 
+  Change the colour of links on hover
+    a:hover, a:focus, changes the colour of nav links while hovering over them, or focusing on them (using tab key)
+    background-color; changes the background colour of the nav links while hovering or focusing
+*/
+#top-nav a:hover,
+#top-nav a:focus {
+  background-color: #bdbdbd;
+}
+/* 
+  Add a colour to the active/current link
+    background-color: changes the colour of the nav link with the #active ID. This changes the colour of the nav link for the current page
+    color: changes the text color to be more readable with the new background colour
+*/
+#top-nav a#active {
+  background-color: #970000;
+  color: #fafafa;
+}
+/* end of navigation menu styling */
+
+/* 
+  This section styles the page headers
+    color: changes font colour to my primary colour, dark maroon
+    text-align: center; centers the heading
+    margin: 30px; adds a margin around the heading of 30px
+    font-size: 4rem; sets the font size to 4x the root font size, or 40px
+    font-family: roboto-slab-light, serif; 
+      sets the font for the heading as my imported font, roboto-slab-light, 
+      with the default serif font as a fallback
+*/
+h1 {
+  color: #500000;
+  text-align: center;
+  margin: 30px;
+  font-size: 4rem;
+  font-family: roboto-slab-light, serif;
+}
+
+/* 
+  This section styles the section headers (<h2>)
+    margin: 30px 20px 10px 20px; sets the margin to 30px, 20px, or 10px, depending on the side of the element.
+      listing multiple values will set the margin from the start, going clockwise. top: 30, right: 20, bottom: 10, etc.
+    font-size: 2rem; sets the font size to 2x the root font size, or 20px
+    font-family: roboto-slab-light, serif;
+      sets the font for the heading as my imported font, roboto-slab-light, with the default serif font as a fallback
+*/
+h2 {
+  margin: 30px 20px 10px 20px;
+  font-size: 2rem;
+  font-family: roboto-slab-light, serif;
+}
+
+/*
+  Styles all horizontal rules present on my webpage
+    color: #911f27; sets the colour of the <hr> to my secondary colour, light maroon
+    margin: 5px; adds 5px of margin around the <hr>
+*/
+hr {
+  color: #970000;
+  margin: 5px;
+}
+
+/* 
+  Styles all paragraphs on my website 
+    margin: sets the margin around the paragraph. it goes through the values clockwise starting from the top
+    font-size: sets the size of the paragraph font to be 1.6 times the root font size, or 16px.
+    font-family: sets the font to roboto-regular (imported font), with the default sans-serif font as a fallback 
+*/
+p {
+  margin: 5px 40px 30px 40px;
+  font-size: 1.7rem;
+  font-family: roboto-regular, sans-serif;
+}
+
+/* 
+  Styles the right image class. **I currently only use this once, but I 
+  plan to use it more in the future, so I made it a class instead of an ID**
+
+    float: right - floats (or moves) an image to the right of the page
+    position: relative; - changes the position "relative" to the default position of the image.
+    top: 5px; - Moves the image by 5px relative to the default (see above)
+    margin - sets the margin around the image.
+    border - sets the size, style, and colour for the border around the image. The colour is my secondary colour
+*/
+#right-image {
+  float: right;
+  position: relative;
+  top: 4px;
+  margin: 10px;
+  border: 2px solid #970000;
+}
+
+/* 
+  Styles the center-image class. This is used to place an image in the center of a page
+    margin - sets the margin around the image, starts at the top and goes clockwise. 
+      auto gives equal margin on left and right sides, meaning that the image is centered.
+    width: 70% - sets the width of the image to be 80% of the total page width
+    border - sets the size, style, and colour for the border around the image. The colour is my secondary colour
+*/
+.center-image {
+  margin: 40px auto 20px auto;
+  width: 70%;
+  border: 2px solid #970000;
+}
+
+/* 
+  Styles all images on the website 
+    display: block; - sets the image to be a block element enstead of an inline element. 
+    transition: transform 0.2s linear; - this is shorthand for adding a transition. transform is the property,
+      0.2 is the duration of the transition, and linear is the timing function
+*/
+img {
+  display: block;
+
+  /* autoprefixer: off */
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  -o-transition: -o-transform 0.2s linear;
+  -moz-transition: transform 0.2s linear, -moz-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear,
+    -moz-transform 0.2s linear, -o-transform 0.2s linear;
+}
+
+/* 
+  This block scales the image by 1.5 when it is hovered over by the user
+    transform: scale(1.5); - scale image by 1.5
+*/
+img:hover {
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+/* 
+  Styles all figcaptions that I use.
+    text-align: center - self explanitory. Aligns text to the center of the page
+    font-size: 1.6rem - sets the font size to 1.6 times the root font size, or 16px
+    font-family: sets the font to roboto-regular (imported font), with the default sans serif font as a fallback 
+*/
+figcaption {
+  text-align: center;
+  font-size: 1.6rem;
+  font-family: roboto-regular, sans-serif;
+}
+
+/* 
+  Styles all paragraphs located in the footer
+    margin-top: 20px; - Adds margin between the paragraph and the <hr> that comes above it
+    text-align: center; - aligns the text to the center of the page 
+*/
+footer p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* 
+  Styles content with the class of source. This is used on the "Terms" page with anchors.
+  It will style both links that have been visited, and those which have not.
+    color: #525252; - sets the text colour of the links to be grey.
+*/
+.source,
+.source :visited {
+  font-family: roboto-regular, sans-serif;
+  color: #525252;
+}

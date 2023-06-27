@@ -1,0 +1,216 @@
+/*
+  Various shades of green were chosen for this website because green represents nature, which is highly valued
+  by indigenous peoples, and because it represents growth, a thing which we are constantly looking towards.
+  Green's positives lend themselves to the theme of this site, which is why they are used both as the main 
+  and secondary colours, but also as the tinted neutrals.
+
+  Only other colour seen is yellow, which is used for a sun. Happiness and joy.
+*/
+
+/*
+  Gives entire webpage more space between lines with 2/5ths of a line between each line.
+  Default margin is also removed giving no space between the webpage and the borders of the browser being used by the client.
+*/
+* {
+  line-height: 140%;
+  margin: 0;
+}
+
+/*
+  Sets the root font size which rem is based off of to a respectable 62.5%, meaning that on a standard screen 1.0rem will be equal to 10px 
+  making the math (and therefore my life) easier.
+*/
+html {
+  font-size: 62.5%;
+}
+
+/*
+  You never want your text to be completely black as it hurts the eyes so alas here we have set our main text colour throughout
+  body to be a dark green. The background colour is default completely white which will also burn the eyeballs of the average human,
+  so here we set it once again to a green, but this time a tile able repeating background of light green.
+  The font is also changed to an Arial font of default with the exception of if Arial is not installed on the clients computer. In which 
+  case it will attempt to load the webpage in the Helvetica font. If all else fails whatever sans-serif font the client has on hand will
+  be loaded. Font size too is changed, to 1.8rem, and as discussed previously, on an average monitor will be equal to 18px.
+*/
+body {
+  background-image: url(../images/pale_olive_green_background-seamless_texture.jpg);
+  -webkit-background-size: 200px 200px;
+  -moz-background-size: 200px;
+  -o-background-size: 200px;
+  background-size: 200px;
+
+  color: #2d3629;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+}
+
+/*Header gets a background colour so it doesn't get the body's background image*/
+header {
+  background-color: #f2fcee;
+}
+
+/*Move text to centre screen, relative font size of 440%*/
+h1 {
+  text-align: center;
+  font-size: 4.4rem;
+}
+
+/*
+  Removes the default bullets that appear with an unordered list. Then removes all default padding and  margin so the list can rest at
+  the edge of the screen. changes the background colour to a darker and more vibrant green than the standard background.
+*/
+nav ul {
+  list-style-type: none;
+
+  /*needed to keep links in nav bar at edge, moves entire list to page edge*/
+  margin: 0;
+  padding: 0;
+
+  /*without this the nav bar bleeds intensely, hide anything that escapes!!!!*/
+  overflow: hidden;
+
+  background-color: #b9db99;
+}
+
+/*all list elements float to the edge of the list itself*/
+nav li {
+  float: left;
+}
+
+/*
+  Sets display function as a block since we want these links to be their own little entities so they can go in an horizontal line
+  with their newfound freedom. The colour is a rich green, everything is green, and growing, and evolving. The text gets aligned to the 
+  center of their blocks as they give up on ever seeing their list friends again, but their solo houses grow to a 14x16px space, which will
+  cost them all of the (non-existent) money they get for working as my navigation links. Finally, we burn their shoes because you dont wear 
+  shoes in the house. And then they become bold.
+*/
+nav li a {
+  display: block;
+  color: #212420;
+
+  text-align: center;
+  padding: 14px 16px;
+
+  /*will get rid of the usual underline for anchors*/
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*when hovering over different web pages in nav bar they will darken*/
+nav li a:hover,
+nav li a:focus {
+  background-color: #87aa79;
+}
+
+/*
+  text on visited nav links will be a less noticeable green.
+*/
+nav li a:visited {
+  color: #2c3f21;
+}
+
+/*darkens the display of page user is on in nav bar*/
+#active {
+  background-color: #cce9b2;
+}
+
+/*
+  All of our elements contained in the main tag will only be allowed to be 652 pixel wide making this a
+  fixed width layout. background colour is a light green which acts as a neutral. margin left and right auto 
+  will make sure that the content is always centre screen. padding bottom will allow some space between the 
+  content inside the semantic tag and the footer that will still be coloured the light green since padding 
+  is interior space and not exterior space. the inset box shadow give the page more dimension by adding
+  a green shadow 2 pixels big and 3 pixels spread. 
+*/
+main {
+  width: 652px;
+  background-color: #f2fcee;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-bottom: 12px;
+
+  -webkit-box-shadow: inset 0px 2px 3px #92b174;
+  -moz-box-shadow: inset 0px 2px 3px #92b174;
+  box-shadow: inset 0px 2px 3px #92b174;
+}
+
+/*
+  Makes the second level headings have a size of 340% percent of the root font size
+  Gives some extra margin because it looked stupid and cramped.
+*/
+h2 {
+  font-size: 3.4rem;
+  margin: 0px 20px 2px;
+}
+
+/*text within section gets the luxury of being 200% of the root font size, and the luxury of 8 by 20 out ward pixels of space*/
+p {
+  font-size: 2rem;
+  margin: 8px 20px;
+}
+
+/*
+  Sets font size to 260% of the root font size(here it would be around 16px)
+  More margin because everything was cramped sand painful and i like my eyes not being burned.
+*/
+h3 {
+  font-size: 2.6rem;
+  margin: 2px 20px;
+}
+
+/*
+  Gives the link the quotes come from a smaller text size of 180% of the root font size to lower its audacity
+*/
+.quote-link {
+  font-size: 1.8rem;
+}
+
+/*
+  display, inline block (so i can actually have a set width and it can not hugh other elements)
+  width, whole screen (shocker)
+  background colour, green (so unexpected)
+  text color, darkgreen (how daring)
+*/
+footer {
+  /*inline-block is only display method that seems to work here*/
+  display: inline-block;
+
+  width: 100%;
+
+  background-color: #b9db99;
+  color: #2d3629;
+}
+
+/*
+  paragraph text within footer will be small, and a block in a line
+  font-size is set to a smaller value of 1.6 rem
+  all around margin of 16 pixels
+*/
+footer p {
+  display: inline-block;
+  font-size: 1.6rem;
+
+  margin: 16px;
+}
+
+/*
+  footer anchor tags, featuring:
+  floating to the right of the screen
+  having a top-bottom margin of 20px and a left-right margin of 10px
+  a font size same as its paragraph text brother
+  making the regular underline thinner
+  a text colour the same as its brother
+*/
+footer a {
+  float: right;
+
+  margin: 20px 10px;
+
+  font-size: 1.6rem;
+  -webkit-text-decoration: underline 1px;
+  -moz-text-decoration: underline 1px;
+  text-decoration: underline 1px;
+  color: #2d3629;
+}

@@ -1,0 +1,15 @@
+// utils folder imports
+@import "utils/variables";
+
+// base folder imports
+@import "base/color";
+@import "base/typography";
+@import "base/reset";
+
+// layout folder imports
+@import "layout/navigation";
+@import "layout/header";
+@import "layout/footer";
+
+// pages folder imports
+@import "pages/home";
