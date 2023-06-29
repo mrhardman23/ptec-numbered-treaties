@@ -12,7 +12,7 @@ function openNav() {
   overlay.style.width = "100%";
 
   document.getElementsByTagName("body")[0].style.overflow = "hidden";
-  document.getElementsByTagName("body")[0].style.position = "fixed";
+  document.getElementsByTagName("body")[0].style.position = "absolute";
 
   closeButtonListItem.ariaHidden = "false";
   closeButtonLink.ariaHidden = "false";
